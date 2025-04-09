@@ -12,7 +12,6 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Kundan Khirade | UI/UX Designer",
   description: "Portfolio of Kundan Khirade, UI/UX Designer with 8 years of experience in design",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

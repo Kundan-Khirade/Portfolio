@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ExternalLink, Github } from "lucide-react"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
 
 export default function ProjectsSection() {
@@ -24,7 +23,7 @@ export default function ProjectsSection() {
       id: "nit-hamirpur-app",
       title: "NIT Hamirpur App",
       category: "mobile",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/vibrant-purple-app.png",
       description:
         "Official mobile application for NIT Hamirpur students with features for campus updates, academic resources, and event notifications.",
       tags: ["UI/UX", "Mobile App", "React Native"],
@@ -37,7 +36,7 @@ export default function ProjectsSection() {
       id: "sorted-tech-website",
       title: "Sorted Tech Website",
       category: "web",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/modern-tech-dark-responsive.png",
       description:
         "A fully responsive website designed and developed from scratch for a tech startup, featuring modern UI elements and smooth interactions.",
       tags: ["Web Design", "Frontend", "React"],
@@ -50,7 +49,7 @@ export default function ProjectsSection() {
       id: "bharatpros-mobile-app",
       title: "BharatPros Mobile App",
       category: "mobile",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/mobile-service-dashboard.png",
       description:
         "Cross-platform mobile application with seamless user flows and consistent design language across iOS and Android.",
       tags: ["Mobile Design", "Flutter", "UX Research"],
@@ -63,7 +62,7 @@ export default function ProjectsSection() {
       id: "youtube-creator-branding",
       title: "YouTube Creator Branding",
       category: "graphic",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/vibrant-youtube-branding.png",
       description:
         "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
       tags: ["Branding", "Thumbnails", "Visual Identity"],
@@ -75,7 +74,7 @@ export default function ProjectsSection() {
       id: "campus-recruitment-portal",
       title: "Campus Recruitment Portal",
       category: "web",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/recruitment-dashboard-professional.png",
       description:
         "Web portal for campus recruitment activities with dashboards for students, recruiters, and placement cell administrators.",
       tags: ["UI Design", "Dashboard", "Web App"],
@@ -88,7 +87,7 @@ export default function ProjectsSection() {
       id: "design-system",
       title: "Design System",
       category: "ui",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/placeholder.svg?height=600&width=800&query=ui+component+library+design+system+documentation",
       description:
         "Comprehensive design system with reusable components, style guides, and documentation for consistent product development.",
       tags: ["Design System", "Components", "Documentation"],
@@ -132,13 +131,14 @@ export default function ProjectsSection() {
                 <Card
                   key={index}
                   className={`overflow-hidden card-hover transition-all duration-700 delay-${index * 100} ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} cursor-pointer`}
-                  onClick={() => router.push(`/projects/${project.id}`)}
+                  onClick={() => {
+                    window.scrollTo(0, 0)
+                    router.push(`/projects/${project.id}`)
+                  }}
                 >
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
-                      src={
-                        project.id === "nit-hamirpur-app" ? "/kundan-image.png" : project.image || "/placeholder.svg"
-                      }
+                      src={project.id === "nit-hamirpur-app" ? "/kundan-image.png" : project.image}
                       alt={project.title}
                       fill
                       className="object-cover object-center transition-transform duration-500 hover:scale-105"
@@ -156,7 +156,7 @@ export default function ProjectsSection() {
                     </div>
                     <div className="flex gap-3">
                       {project.links.live && (
-                        <Link
+                        <a
                           href={project.links.live}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -166,10 +166,10 @@ export default function ProjectsSection() {
                             <ExternalLink className="h-4 w-4" />
                             Live
                           </Button>
-                        </Link>
+                        </a>
                       )}
                       {project.links.github && (
-                        <Link
+                        <a
                           href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -179,7 +179,7 @@ export default function ProjectsSection() {
                             <Github className="h-4 w-4" />
                             Code
                           </Button>
-                        </Link>
+                        </a>
                       )}
                     </div>
                   </CardContent>
@@ -190,12 +190,10 @@ export default function ProjectsSection() {
         </Tabs>
 
         <div className="text-center">
-          <Link href="/projects">
-            <Button size="lg" variant="outline" className="group">
-              View All Projects
-              <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
+          <Button size="lg" variant="outline" className="group" onClick={() => router.push("/projects")}>
+            View All Projects
+            <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
       </div>
     </section>

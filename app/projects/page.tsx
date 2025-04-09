@@ -8,7 +8,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { useState } from "react"
 
 // This would typically come from a database or API
 const projects = [
@@ -16,7 +17,7 @@ const projects = [
     id: "nit-hamirpur-app",
     title: "NIT Hamirpur App",
     category: "mobile",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/vibrant-purple-app.png",
     description:
       "Official mobile application for NIT Hamirpur students with features for campus updates, academic resources, and event notifications.",
     tags: ["UI/UX", "Mobile App", "React Native"],
@@ -29,7 +30,7 @@ const projects = [
     id: "sorted-tech-website",
     title: "Sorted Tech Website",
     category: "web",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/modern-tech-dark-responsive.png",
     description:
       "A fully responsive website designed and developed from scratch for a tech startup, featuring modern UI elements and smooth interactions.",
     tags: ["Web Design", "Frontend", "React"],
@@ -42,7 +43,7 @@ const projects = [
     id: "bharatpros-mobile-app",
     title: "BharatPros Mobile App",
     category: "mobile",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/mobile-service-dashboard.png",
     description:
       "Cross-platform mobile application with seamless user flows and consistent design language across iOS and Android.",
     tags: ["Mobile Design", "Flutter", "UX Research"],
@@ -55,7 +56,7 @@ const projects = [
     id: "youtube-creator-branding",
     title: "YouTube Creator Branding",
     category: "graphic",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/vibrant-youtube-branding.png",
     description:
       "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
     tags: ["Branding", "Thumbnails", "Visual Identity"],
@@ -67,7 +68,7 @@ const projects = [
     id: "campus-recruitment-portal",
     title: "Campus Recruitment Portal",
     category: "web",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/recruitment-dashboard-professional.png",
     description:
       "Web portal for campus recruitment activities with dashboards for students, recruiters, and placement cell administrators.",
     tags: ["UI Design", "Dashboard", "Web App"],
@@ -80,7 +81,7 @@ const projects = [
     id: "design-system",
     title: "Design System",
     category: "ui",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?height=600&width=800&query=ui+component+library+design+system+documentation",
     description:
       "Comprehensive design system with reusable components, style guides, and documentation for consistent product development.",
     tags: ["Design System", "Components", "Documentation"],
@@ -92,7 +93,7 @@ const projects = [
     id: "e-commerce-app",
     title: "E-Commerce App",
     category: "mobile",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?height=600&width=800&query=e-commerce+mobile+app+shopping+cart+product+gallery",
     description:
       "Mobile shopping application with intuitive product browsing, cart management, and checkout experience.",
     tags: ["Mobile Design", "E-Commerce", "UX/UI"],
@@ -105,7 +106,7 @@ const projects = [
     id: "travel-website",
     title: "Travel Website",
     category: "web",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?height=600&width=800&query=travel+website+destination+booking+scenic+views",
     description: "Responsive travel booking website with destination discovery, booking management, and user reviews.",
     tags: ["Web Design", "Travel", "Booking System"],
     links: {
@@ -117,7 +118,7 @@ const projects = [
     id: "restaurant-branding",
     title: "Restaurant Branding",
     category: "graphic",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?height=600&width=800&query=restaurant+branding+logo+menu+design+elegant",
     description:
       "Complete brand identity for a high-end restaurant including logo, menu design, and marketing materials.",
     tags: ["Branding", "Logo Design", "Print Design"],
@@ -129,7 +130,7 @@ const projects = [
     id: "fitness-app",
     title: "Fitness App",
     category: "mobile",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?height=600&width=800&query=fitness+app+workout+tracker+progress+charts",
     description: "Workout tracking and fitness planning app with progress visualization and social features.",
     tags: ["Mobile Design", "Health", "UX Research"],
     links: {
@@ -141,7 +142,7 @@ const projects = [
     id: "portfolio-template",
     title: "Portfolio Template",
     category: "web",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?height=600&width=800&query=portfolio+website+template+designer+showcase",
     description: "Customizable portfolio website template for designers and creative professionals.",
     tags: ["Web Design", "Template", "Portfolio"],
     links: {
@@ -153,7 +154,7 @@ const projects = [
     id: "music-streaming-app",
     title: "Music Streaming App",
     category: "mobile",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?height=600&width=800&query=music+streaming+app+player+playlist+interface",
     description: "Music streaming application with personalized recommendations and playlist management.",
     tags: ["Mobile Design", "Music", "UX/UI"],
     links: {
@@ -164,6 +165,17 @@ const projects = [
 ]
 
 export default function ProjectsPage() {
+  const [activeTab, setActiveTab] = useState("all")
+  const router = useRouter()
+
+  const filteredProjects = activeTab === "all" ? projects : projects.filter((project) => project.category === activeTab)
+
+  const handleProjectClick = (projectId: string) => {
+    // Scroll to top before navigation
+    window.scrollTo(0, 0)
+    router.push(`/projects/${projectId}`)
+  }
+
   return (
     <main className="min-h-screen grid-pattern noise-bg">
       <Navbar />
@@ -182,7 +194,7 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <Tabs defaultValue="all" className="mb-12">
+          <Tabs defaultValue="all" className="mb-12" onValueChange={setActiveTab}>
             <div className="flex justify-center">
               <TabsList className="grid grid-cols-5 w-full max-w-md">
                 <TabsTrigger value="all">All</TabsTrigger>
@@ -193,133 +205,65 @@ export default function ProjectsPage() {
               </TabsList>
             </div>
 
-            <TabsContent value="all" className="mt-8">
+            <TabsContent value={activeTab} className="mt-8">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {projects.map((project, index) => (
-                  <Link href={`/projects/${project.id}`} key={project.id}>
-                    <Card className="overflow-hidden card-hover h-full">
-                      <div className="relative h-48 w-full overflow-hidden">
-                        <Image
-                          src={
-                            project.id === "nit-hamirpur-app"
-                              ? "/kundan-image.png"
-                              : project.image || "/placeholder.svg"
-                          }
-                          alt={project.title}
-                          fill
-                          className="object-cover object-center transition-transform duration-500 hover:scale-105"
-                        />
+                {filteredProjects.map((project) => (
+                  <Card
+                    key={project.id}
+                    className="overflow-hidden card-hover h-full cursor-pointer"
+                    onClick={() => handleProjectClick(project.id)}
+                  >
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={project.id === "nit-hamirpur-app" ? "/kundan-image.png" : project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover object-center transition-transform duration-500 hover:scale-105"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                      <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tags.map((tag, i) => (
+                          <Badge key={i} variant="secondary" className="text-xs">
+                            {tag}
+                          </Badge>
+                        ))}
                       </div>
-                      <CardContent className="p-6">
-                        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                        <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {project.tags.map((tag, i) => (
-                            <Badge key={i} variant="secondary" className="text-xs">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                        <div className="flex gap-3">
-                          {project.links.live && (
-                            <Link
-                              href={project.links.live}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <Button variant="outline" size="sm" className="gap-1">
-                                <ExternalLink className="h-4 w-4" />
-                                Live
-                              </Button>
-                            </Link>
-                          )}
-                          {project.links.github && (
-                            <Link
-                              href={project.links.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              <Button variant="outline" size="sm" className="gap-1">
-                                <Github className="h-4 w-4" />
-                                Code
-                              </Button>
-                            </Link>
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
+                      <div className="flex gap-3">
+                        {project.links.live && (
+                          <a
+                            href={project.links.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Button variant="outline" size="sm" className="gap-1">
+                              <ExternalLink className="h-4 w-4" />
+                              Live
+                            </Button>
+                          </a>
+                        )}
+                        {project.links.github && (
+                          <a
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Button variant="outline" size="sm" className="gap-1">
+                              <Github className="h-4 w-4" />
+                              Code
+                            </Button>
+                          </a>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </TabsContent>
-
-            {["mobile", "web", "graphic", "ui"].map((category) => (
-              <TabsContent key={category} value={category} className="mt-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {projects
-                    .filter((project) => project.category === category)
-                    .map((project) => (
-                      <Link href={`/projects/${project.id}`} key={project.id}>
-                        <Card className="overflow-hidden card-hover h-full">
-                          <div className="relative h-48 w-full overflow-hidden">
-                            <Image
-                              src={
-                                project.id === "nit-hamirpur-app"
-                                  ? "/kundan-image.png"
-                                  : project.image || "/placeholder.svg"
-                              }
-                              alt={project.title}
-                              fill
-                              className="object-cover object-center transition-transform duration-500 hover:scale-105"
-                            />
-                          </div>
-                          <CardContent className="p-6">
-                            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                            <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                              {project.tags.map((tag, i) => (
-                                <Badge key={i} variant="secondary" className="text-xs">
-                                  {tag}
-                                </Badge>
-                              ))}
-                            </div>
-                            <div className="flex gap-3">
-                              {project.links.live && (
-                                <Link
-                                  href={project.links.live}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  onClick={(e) => e.stopPropagation()}
-                                >
-                                  <Button variant="outline" size="sm" className="gap-1">
-                                    <ExternalLink className="h-4 w-4" />
-                                    Live
-                                  </Button>
-                                </Link>
-                              )}
-                              {project.links.github && (
-                                <Link
-                                  href={project.links.github}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  onClick={(e) => e.stopPropagation()}
-                                >
-                                  <Button variant="outline" size="sm" className="gap-1">
-                                    <Github className="h-4 w-4" />
-                                    Code
-                                  </Button>
-                                </Link>
-                              )}
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    ))}
-                </div>
-              </TabsContent>
-            ))}
           </Tabs>
         </div>
       </section>

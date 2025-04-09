@@ -40,8 +40,8 @@ export default function ContactSection() {
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
                     <p className="text-muted-foreground text-sm mb-2">Feel free to email me</p>
-                    <a href="mailto:kundan@example.com" className="text-primary hover:underline">
-                      kundan@example.com
+                    <a href="mailto:kkhirade25@gmail.com" className="text-primary hover:underline">
+                      kkhirade25@gmail.com
                     </a>
                   </div>
                 </CardContent>
