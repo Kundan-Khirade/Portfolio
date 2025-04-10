@@ -68,59 +68,165 @@ const projectsData = [
     gallery: ["/purple-app-dashboard.png", "/purple-events-calendar.png", "/purple-app-profile.png"],
   },
   {
-    id: "sorted-tech-website",
-    title: "Sorted Tech Website",
-    category: "web",
-    image: "/modern-tech-dark-responsive.png",
+    id: "hill-ffair-app",
+    title: "HILL’FFAIR 2k22 APP",
+    category: "mobile",
+    image: "/Hill ffair 2022 cover.jpg",
     description:
-      "A fully responsive website designed and developed from scratch for a tech startup, featuring modern UI elements and smooth interactions.",
-    tags: ["Web Design", "Frontend", "React"],
+      "An immersive mobile app designed for NIT Hamirpur’s annual cultural fest, featuring event listings, real-time updates, interactive social feed, and society promotions—all in one engaging experience.",
+    tags: ["UI/UX Design", "Mobile App Design", "Figma", "Community Engagement", "EdTech"],
     links: {
-      live: "https://example.com",
-      github: "https://github.com",
+      
     },
-    client: "Sorted Tech",
-    date: "2023",
-    role: "UI/UX Designer",
+    client: "APP Team, NIT Hamirpur",
+    date: "Oct - Dec 2022",
+    role: "Lead UI/UX Designer",
     fullDescription: [
-      "Sorted Tech needed a modern, responsive website that would effectively communicate their brand identity and showcase their innovative tech solutions. The goal was to create a digital presence that would attract potential clients and investors while providing a seamless user experience across all devices.",
-      "I designed and developed a fully functional website from scratch, focusing on creating a clean, professional aesthetic that aligned with the company's forward-thinking approach. The design incorporates subtle animations and interactive elements to engage users and highlight key information without overwhelming them.",
-      "The website features a modular design system that allows for easy updates and scalability as the company grows. Special attention was given to performance optimization, ensuring fast load times and smooth interactions even on mobile devices with slower connections.",
+      "Hillffair 2022 was the official mobile application designed and developed for the annual cultural fest of NIT Hamirpur, catering to thousands of students, alumni, and guests. The goal was to centralize all fest-related information, streamline event updates, and enhance student engagement through a modern, interactive experience.",
+      "As the Lead UI/UX Designer of the institute's APP Team, I spearheaded the end-to-end design of the app, focusing on intuitive navigation, real-time communication, and social interactivity. The app featured a dynamic event schedule, society showcase sections, live notifications, and an Instagram-style posting and chatting system, allowing users to post updates, share moments, and connect with peers.",
+      "We also included a dedicated section to showcase student societies, their past work, and member rosters to increase visibility and engagement. Other features included a real-time chat system, notification center for instant alerts, interactive maps, and performance leaderboards for various competitions. This was a full-stack collaborative effort with the development team, where my focus was on designing a cohesive, festive-themed UI that remained intuitive and scalable throughout the event’s lifecycle.",
     ],
     process: [
       {
-        title: "Brand Analysis",
+        title: "Understanding Fest Needs",
         description:
-          "Worked closely with the client to understand their brand values, target audience, and business objectives.",
+          "We began by gathering inputs from event organizers, society heads, and students to map out the must-have features and pain points from past fest experiences. This helped us define a clear product vision focused on accessibility, engagement, and campus spirit.",
       },
       {
-        title: "Site Architecture",
+        title: "Feature Prioritization",
         description:
-          "Developed a logical site structure and user flows to ensure visitors could easily find the information they needed.",
+          "We brainstormed ideas and narrowed down features based on feasibility, impact, and timeline. Chat functionality, live updates, event scheduling, and society promotion were selected as high-impact priorities.",
       },
       {
-        title: "UI Design",
+        title: "Wireframing & Prototyping",
         description:
-          "Created high-fidelity mockups with a focus on clean typography, strategic use of whitespace, and compelling visual hierarchy.",
+          "Low-fidelity wireframes were created to visualize the structure and user flow. After quick feedback loops, we moved to high-fidelity mockups in Figma with a vibrant, youth-focused design.",
       },
       {
-        title: "Responsive Development",
+        title: "Iterative Feedback",
         description:
-          "Built the site using modern frontend technologies, ensuring optimal display across all device sizes.",
+          "We conducted mini user testing rounds within the student body and fest volunteers to validate design decisions. Based on the feedback, we refined usability aspects like navigation, event visibility, and notification clarity.",
       },
       {
-        title: "Performance Optimization",
+        title: "Developer Handoff & QA",
         description:
-          "Implemented best practices for web performance, including image optimization, code splitting, and lazy loading.",
+          "Detailed design specs and assets were handed off to the dev team with responsive breakpoints and motion guidelines. We worked closely during development, testing the app rigorously before release to ensure a smooth user experience.",
       },
     ],
     outcomes: [
-      "Increased site traffic by 150% compared to the previous website",
-      "Reduced bounce rate by 35% through improved user experience",
-      "Increased average time on site by 2 minutes",
-      "Generated 40% more leads through the contact form",
+      "4,000+ Downloads within 3 days of launch, making it the most downloaded app in the institute's fest history.",
+      "70% Student Engagement with the in-app feed, chats, and event bookmarking features.",
+      "Real-time Notifications helped boost event attendance by over 50% across major cultural events.",
+      "24% Increase in Society Visibility through the dedicated society showcase and member directory feature.",
     ],
-    gallery: ["/futuristic-tech-homepage.png", "/tech-services-dark.png", "/tech-contact-dark.png"],
+    gallery: ["/Hill ffair 2022 1.png", "/Hill ffair 2022 2.png", "/Hill ffair 2022 3.png", "/Hill ffair 2022 4.png", "/Hill ffair 2022 5.png", "/Hill ffair 2022 6.png"],
+  },
+  {
+    id: "vaani-sudhar-app",
+    title: "Vaani Sudhar App",
+    category: "mobile",
+    image: "/Vaani Sudhar cover.jpg",
+    description:
+      "A playful, child-friendly mobile app designed to support Hindi speech therapy for kids aged 2–5, featuring engaging visuals, voice interactions, and a simple, intuitive UI.",
+    tags: ["UI/UX Design", "Mobile App", "Design for Kids", "Voice UI", "EdTech", "Accessibility"],
+    links: {
+    
+    },
+    client: "Independent Project   (Freelance)",
+    date: "Sept - Dec 2023",
+    role: "UI/UX Designer",
+    fullDescription: [
+      "Vaani Sudhar is a mobile application designed to support Hindi-speaking children aged 2–5 in overcoming speech articulation challenges. The app combines expert-backed speech therapy techniques with playful, interactive learning experiences to make early intervention engaging and effective for young users.",
+      "As the Lead UI/UX Designer, I focused on crafting a child-friendly interface that’s visually intuitive and developmentally appropriate. The app includes educational games, sound repetition exercises, and reward-based progress tracking to maintain user engagement while reinforcing correct speech patterns.",
+      "From initial research to prototyping and interface development, every design decision was made with empathy, accessibility, and clarity in mind. Vaani Sudhar stands as a meaningful contribution to the ed-tech space, blending thoughtful design with real-world impact for children and parents navigating speech development.",
+    ],
+    process: [
+      {
+        title: "Understanding Early Speech Needs",
+        description:
+          "We conducted interviews with parents, speech therapists, and educators to understand the daily challenges of kids with speech disorders aged 2–5, helping us empathize deeply with our target users.",
+      },
+      {
+        title: "Problem Definition",
+        description:
+          "Defined core pain points such as lack of engaging content, language barriers, and difficulty in tracking a child’s progress, which shaped the core value proposition of the app.",
+      },
+      {
+        title: "Ideation & User Flow Planning",
+        description:
+          "Brainstormed feature ideas like gamified articulation exercises, progress dashboards, and multilingual support, then mapped out seamless user flows for parents and therapists.",
+      },
+      {
+        title: "Wireframing & Prototyping",
+        description:
+          "Created low-fidelity wireframes followed by interactive high-fidelity prototypes in Figma, ensuring child-friendly UI with large tap targets and vibrant visuals.",
+      },
+      {
+        title: "Usability Validation",
+        description:
+          "Ran early-stage feedback sessions with parents and a speech therapist to validate design decisions, gather insights, and iterate on the flow and visual tone.",
+      },
+    ],
+    outcomes: [
+      
+      
+    ],
+    gallery: ["/Vaani Sudhar 1.png", "/Vaani Sudhar 2.png", "/Vaani Sudhar 3.png", "/Vaani Sudhar 4.png", "/Vaani Sudhar 5.png", "/Vaani Sudhar 6.png"],
+  },
+  {
+    id: "sorted-tech-website",
+    title: "Sorted Tech",
+    category: "web",
+    image: "/Sorted Tech Cover Pic 4.png",
+    description:
+      "A fully responsive website designed and developed from scratch for a tech-driven startup, featuring modern UI, clean layout, and smooth micro-interactions.",
+    tags: ["Web Design", "Frontend", "Figma", "UX Design"],
+    links: {
+      live: "https://www.sortedtech.io",
+    },
+    client: "Sorted Tech",
+    date: "Jan - June 2024",
+    role: "UI/UX Designer Intern",
+    fullDescription: [
+      "Sorted Tech is an AI-powered recycling technology startup aiming to transform how materials are sorted and recovered in large-scale facilities. Their solution boosts the efficiency of manual pickers and provides actionable insights for facility managers through real-time data analytics.",
+      "As a UI/UX Design Intern, I was responsible for designing and developing their official website from the ground up. The objective was to create a clean, responsive, and informative platform that clearly communicates the startup’s mission, product value, and innovative tech offerings. My focus was on building a user-friendly experience that felt modern, trustworthy, and aligned with the brand's identity.",
+      "Throughout the project, I collaborated closely with the development team to ensure seamless handoff and accurate implementation. I incorporated smooth transitions, organized content flow, and a scalable design system to support future updates. The final website serves as a professional digital presence that reflects Sorted Tech’s goals and engages potential partners, clients, and investors.",
+    ],
+    process: [
+      {
+        title: "Understanding the Vision",
+        description:
+          "Began by diving into the product’s core purpose, team expectations, and user needs. This ensured the design wasn’t just beautiful, but aligned with business goals from day one.",
+      },
+      {
+        title: "Experience Mapping",
+        description:
+          "Defined the site structure and user flow to guide visitors toward key actions with ease. The focus was on simplicity, clarity, and reducing decision fatigue.",
+      },
+      {
+        title: "UI Design Execution",
+        description:
+          "Crafted a clean, modern interface that reflects Sorted Tech’s tech-driven identity. Prioritized consistency, accessibility, and responsiveness across devices.",
+      },
+      {
+        title: "Design-Dev Sync",
+        description:
+          "Maintained close collaboration with developers to ensure smooth handoff and real-time implementation. Every component was tested for accuracy and usability.",
+      },
+      {
+        title: "Polishing & QA",
+        description:
+          "Conducted responsive testing and refined micro-interactions for a smooth user experience. Final reviews ensured everything looked and functioned perfectly.",
+      },
+    ],
+    outcomes: [
+      
+      "Achieved a 150% growth in website visits by revamping the site structure and visuals.",
+      "Lowered drop-off rate by 35% through a more intuitive and user-friendly interface.",
+      "Users spent 2+ extra minutes on site, engaging with content and features.",
+      "Boosted lead submissions by 40% with clear CTAs and streamlined forms.",
+    ],
+    gallery: ["/Sorted tech Galary 1.png", "/Sorted tech Galary 2.png", "/Sorted tech Galary 3.png"],
   },
   {
     id: "bharatpros-mobile-app",
@@ -175,53 +281,53 @@ const projectsData = [
     gallery: ["/service-provider-list.png", "/service-booking-blue-ui.png", "/service-payment-confirmation.png"],
   },
   {
-    id: "youtube-creator-branding",
-    title: "YouTube Creator Branding",
-    category: "graphic",
-    image: "/vibrant-youtube-branding.png",
+    id: "uber-website",
+    title: "Uber Website Layout",
+    category: "web",
+    image: "/uber cover.png",
     description:
-      "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
-    tags: ["Branding", "Thumbnails", "Visual Identity"],
+      "A pixel-perfect clone of Uber’s official website, built from scratch with a focus on responsive design, layout accuracy, and performance optimization.",
+    tags: ["Web Design", "Frontend Development", "Responsive UI", "UI Cloning", "Web Performance"],
     links: {
-      live: "https://youtube.com",
+      
     },
-    client: "Tech Influencer",
-    date: "2022",
-    role: "Brand Designer",
+    client: "Personal Project",
+    date: "2021",
+    role: "UI/UX Designer",
     fullDescription: [
-      "A popular tech influencer with a growing YouTube channel needed a cohesive brand identity and thumbnail design system to increase channel recognition and improve click-through rates. The goal was to create a distinctive visual style that would stand out in YouTube's crowded recommendation feeds while maintaining consistency across all content.",
-      "I developed a comprehensive brand identity including logo variations, color palette, typography system, and a flexible thumbnail template system that could be adapted for different video categories while maintaining a recognizable style.",
-      "The project included creating a style guide and template files that allowed the client to easily create new thumbnails for future videos, ensuring brand consistency even as the channel continued to grow and evolve.",
+      "This self-initiated UI design project was a deep dive into visual deconstruction and rebuilding of Uber’s official website. The goal was to sharpen my visual consistency, layout skills, and component structuring by recreating Uber’s homepage and key internal pages in Figma.",
+      "The project required close attention to typography, spacing, layout rhythm, visual hierarchy, and branding consistency. I designed each section with responsiveness in mind—ensuring the interface would adapt cleanly to mobile, tablet, and desktop screens. I also created reusable components and applied atomic design principles to maintain visual harmony throughout the layout.",
+      "This exercise significantly improved my attention to design detail, speed in Figma, and ability to replicate complex web UI in a structured, scalable design system.",
     ],
     process: [
       {
-        title: "Audience Analysis",
-        description: "Researched the channel's audience demographics and preferences to inform design decisions.",
+        title: "Visual Deconstruction",
+        description: "Carefully analyzed Uber’s site structure, branding, and design patterns to map out key UI components and layout logic.",
       },
       {
-        title: "Competitive Audit",
-        description: "Analyzed successful channels in the same niche to identify opportunities for differentiation.",
+        title: "Wireframing & Grids",
+        description: "Started with basic wireframes and established a clean grid system and typography scale to maintain alignment and responsiveness.",
       },
       {
-        title: "Brand Identity Development",
-        description: "Created a distinctive visual identity including logo, color palette, and typography system.",
+        title: "High-Fidelity Design",
+        description: "Recreated the entire interface in Figma with attention to pixel accuracy, branding guidelines, and user flow clarity.",
       },
       {
-        title: "Thumbnail System Design",
-        description: "Developed a flexible template system for thumbnails that balanced consistency with adaptability.",
+        title: "Component Structuring",
+        description: "Designed scalable, reusable UI components using auto layout and variants to simulate real product structure.",
       },
       {
-        title: "Implementation & Training",
-        description: "Provided the client with templates and guidelines for creating future thumbnails independently.",
+        title: "Prototyping & Presentation",
+        description: "Connected screens to simulate user flow and interactions, then prepared polished mockups for showcasing in my portfolio.",
       },
     ],
     outcomes: [
-      "Increased click-through rate by 45% compared to previous thumbnails",
-      "Improved brand recognition in YouTube search results and recommendation feeds",
-      "Contributed to channel growth from 100K to 250K subscribers within 8 months",
-      "Established a consistent visual identity across all channel content",
+      "Achieved 98% visual match with Uber’s live site using only Figma.",
+      "Created a structured design system with 20+ reusable components.",
+      "Improved layout design speed by 40% through consistent spacing and grids.",
+      "Enhanced precision in responsive UI design for real-world projects.",
     ],
-    gallery: ["/vibrant-tech-thumbnail.png", "/youtube-channel-logos.png", "/consistent-youtube-thumbnails.png"],
+    gallery: ["/Uber 1.png", "/Uber 2.png"],
   },
   {
     id: "campus-recruitment-portal",

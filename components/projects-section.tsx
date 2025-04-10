@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ExternalLink, Github } from "lucide-react"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 
 export default function ProjectsSection() {
@@ -20,49 +21,59 @@ export default function ProjectsSection() {
 
   const projects = [
     {
-      id: "nit-hamirpur-app",
-      title: "NIT Hamirpur App",
-      category: "mobile",
-      image: "/vibrant-purple-app.png",
-      description:
-        "Official mobile application for NIT Hamirpur students with features for campus updates, academic resources, and event notifications.",
-      tags: ["UI/UX", "Mobile App", "React Native"],
-      links: {
-        live: "https://play.google.com/store",
-        github: "https://github.com",
-      },
-    },
-    {
       id: "sorted-tech-website",
       title: "Sorted Tech Website",
       category: "web",
-      image: "/modern-tech-dark-responsive.png",
+      image: "Sorted Tech Cover Pic 4.png",
       description:
-        "A fully responsive website designed and developed from scratch for a tech startup, featuring modern UI elements and smooth interactions.",
-      tags: ["Web Design", "Frontend", "React"],
+        "An website built to showcase AI-powered recycling and real-time waste management solutions.",
+      tags: ["UI/UX", "Web Design", "UX Design", "SaaS Product"],
       links: {
-        live: "https://example.com",
-        github: "https://github.com",
+        live: "https://www.sortedtech.io/",
+      
       },
     },
     {
-      id: "bharatpros-mobile-app",
-      title: "BharatPros Mobile App",
+      id: "hill-ffair-app",
+      title: "HILL’FFAIR 2k22 APP",
       category: "mobile",
-      image: "/mobile-service-dashboard.png",
+      image: "Hill ffair 2022 cover.jpg",
       description:
-        "Cross-platform mobile application with seamless user flows and consistent design language across iOS and Android.",
-      tags: ["Mobile Design", "Flutter", "UX Research"],
+        "An immersive mobile app designed for NIT Hamirpur’s annual cultural fest, featuring event listings, real-time updates, interactive social feed, and society promotions—all in one engaging experience.",
+      tags: ["UI/UX Design", "Mobile App Design", "Figma", "Community Engagement", "EdTech"],
       links: {
-        live: "https://play.google.com/store",
-        github: "https://github.com",
+       
+      },
+    },
+    {
+      id: "vaani-sudhar-app",
+      title: "Vaani Sudhar App",
+      category: "mobile",
+      image: "/Vaani Sudhar cover.jpg",
+      description:
+        "An interactive Hindi speech therapy app designed for children aged 2–5, helping them improve articulation through playful, voice-guided learning.",
+      tags: ["Mobile Design", "Speech Therapy", "UX Research", "Kids App", "EdTech", "UI Design"],
+      links: {
+  
+      },
+    },
+    {
+      id: "uber-website",
+      title: "Uber Website Layout",
+      category: "web",
+      image: "/uber cover.png",
+      description:
+        "A pixel-perfect clone of Uber’s official website, built from scratch with a focus on responsive design, layout accuracy, and performance optimization.",
+      tags: ["Web Design", "Frontend Development", "Responsive UI", "UI Cloning", "Web Performance"],
+      links: {
+  
       },
     },
     {
       id: "youtube-creator-branding",
-      title: "YouTube Creator Branding",
+      title: "YouTube Creator ",
       category: "graphic",
-      image: "/vibrant-youtube-branding.png",
+      image: "/logoo.jpg",
       description:
         "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
       tags: ["Branding", "Thumbnails", "Visual Identity"],
@@ -74,7 +85,7 @@ export default function ProjectsSection() {
       id: "campus-recruitment-portal",
       title: "Campus Recruitment Portal",
       category: "web",
-      image: "/recruitment-dashboard-professional.png",
+      image: "/placeholder.svg?height=600&width=800",
       description:
         "Web portal for campus recruitment activities with dashboards for students, recruiters, and placement cell administrators.",
       tags: ["UI Design", "Dashboard", "Web App"],
@@ -87,7 +98,7 @@ export default function ProjectsSection() {
       id: "design-system",
       title: "Design System",
       category: "ui",
-      image: "/placeholder.svg?height=600&width=800&query=ui+component+library+design+system+documentation",
+      image: "/placeholder.svg?height=600&width=800",
       description:
         "Comprehensive design system with reusable components, style guides, and documentation for consistent product development.",
       tags: ["Design System", "Components", "Documentation"],
@@ -131,14 +142,13 @@ export default function ProjectsSection() {
                 <Card
                   key={index}
                   className={`overflow-hidden card-hover transition-all duration-700 delay-${index * 100} ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} cursor-pointer`}
-                  onClick={() => {
-                    window.scrollTo(0, 0)
-                    router.push(`/projects/${project.id}`)
-                  }}
+                  onClick={() => router.push(`/projects/${project.id}`)}
                 >
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
-                      src={project.id === "nit-hamirpur-app" ? "/kundan-image.png" : project.image}
+                      src={
+                        project.id === "nit-hamirpur-app" ? "/kundan-image.png" : project.image || "/placeholder.svg"
+                      }
                       alt={project.title}
                       fill
                       className="object-cover object-center transition-transform duration-500 hover:scale-105"
@@ -156,7 +166,7 @@ export default function ProjectsSection() {
                     </div>
                     <div className="flex gap-3">
                       {project.links.live && (
-                        <a
+                        <Link
                           href={project.links.live}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -166,10 +176,10 @@ export default function ProjectsSection() {
                             <ExternalLink className="h-4 w-4" />
                             Live
                           </Button>
-                        </a>
+                        </Link>
                       )}
                       {project.links.github && (
-                        <a
+                        <Link
                           href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -179,7 +189,7 @@ export default function ProjectsSection() {
                             <Github className="h-4 w-4" />
                             Code
                           </Button>
-                        </a>
+                        </Link>
                       )}
                     </div>
                   </CardContent>
@@ -190,10 +200,12 @@ export default function ProjectsSection() {
         </Tabs>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="group" onClick={() => router.push("/projects")}>
-            View All Projects
-            <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link href="/projects">
+            <Button size="lg" variant="outline" className="group">
+              View All Projects
+              <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
