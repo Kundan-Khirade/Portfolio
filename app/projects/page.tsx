@@ -77,6 +77,30 @@ const projects = [
     },
   },
   {
+    id: "promptpdf",
+    title: "PromptPDF Website ",
+    category: "web",
+    image: "/Prompt pdf Cover.png",
+    description:
+      "Designed the user interface for PromptPDF, an AI-driven platform that enables users to generate professional documents effortlessly across various formats.",
+    tags: ["UI Design", "UX Design", "Figma", "AI SaaS", "Web App", "Responsive Design","Prototyping"],
+    links: {
+      live: "https://promptpdf.vercel.app/",
+    },
+  },
+  {
+    id: "nith-career-compass",
+    title: "NITH Career Compass Website",
+    category: "web",
+    image: "/NITH career compass cover.jpg",
+    description:
+      "A collaborative platform connecting placed students with juniors, sharing real placement journeys, tips, and insights across on-campus and off-campus experiences.",
+    tags: ["UX Design", "UI Design", "Web Platform", "Community Building", "Figma", "Responsive Design"],
+    links: {
+      live: "https://nithcc.vercel.app/",
+    },
+  },
+  {
     id: "youtube-creator-branding",
     title: "YouTube Creator Branding",
     category: "graphic",

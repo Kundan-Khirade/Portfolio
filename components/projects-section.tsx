@@ -27,7 +27,7 @@ export default function ProjectsSection() {
       image: "Sorted Tech Cover Pic 4.png",
       description:
         "An website built to showcase AI-powered recycling and real-time waste management solutions.",
-      tags: ["UI/UX", "Web Design", "UX Design", "SaaS Product"],
+      tags: ["UI/UX", "Web Design", "UX Design", "SaaS Product", "Figma"],
       links: {
         live: "https://www.sortedtech.io/",
       
@@ -70,28 +70,27 @@ export default function ProjectsSection() {
       },
     },
     {
-      id: "youtube-creator-branding",
+      id: "promptpdf",
       title: "PromptPDF Website ",
       category: "web",
       image: "/Prompt pdf Cover.png",
       description:
-        "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
-      tags: ["Branding", "Thumbnails", "Visual Identity"],
+        "Designed the user interface for PromptPDF, an AI-driven platform that enables users to generate professional documents effortlessly across various formats.",
+      tags: ["UI Design", "UX Design", "Figma", "AI SaaS", "Web App", "Responsive Design","Prototyping"],
       links: {
-        live: "https://youtube.com",
+        live: "https://promptpdf.vercel.app/",
       },
     },
     {
-      id: "campus-recruitment-portal",
-      title: "Campus Recruitment Portal",
+      id: "nith-career-compass",
+      title: "NITH Career Compass Website",
       category: "web",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/NITH career compass cover.jpg",
       description:
-        "Web portal for campus recruitment activities with dashboards for students, recruiters, and placement cell administrators.",
-      tags: ["UI Design", "Dashboard", "Web App"],
+        "A collaborative platform connecting placed students with juniors, sharing real placement journeys, tips, and insights across on-campus and off-campus experiences.",
+      tags: ["UX Design", "UI Design", "Web Platform", "Community Building", "Figma", "Responsive Design"],
       links: {
-        live: "https://example.com",
-        github: "https://github.com",
+        live: "https://nithcc.vercel.app/",
       },
     },
     {
