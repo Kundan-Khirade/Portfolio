@@ -11,6 +11,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
+
 // This would typically come from a database or API
 const projects = [
   {
@@ -243,15 +244,13 @@ export default function ProjectsPage() {
           </div>
 
           <Tabs defaultValue="all" className="mb-12" onValueChange={setActiveTab}>
-            <div className="flex justify-center">
-              <TabsList className="grid grid-cols-5 w-full max-w-md">
-                <TabsTrigger value="all">All</TabsTrigger>
-                <TabsTrigger value="mobile">Mobile</TabsTrigger>
-                <TabsTrigger value="web">Web</TabsTrigger>
-                <TabsTrigger value="graphic">Graphic</TabsTrigger>
-                <TabsTrigger value="ui">UI/UX</TabsTrigger>
-              </TabsList>
-            </div>
+          <div className="flex justify-center">
+  <TabsList className="grid w-full max-w-md grid-cols-3"> {/* Changed to 3 columns since you have 3 tabs */}
+    <TabsTrigger value="all">All</TabsTrigger>
+    <TabsTrigger value="mobile">Mobile</TabsTrigger>
+    <TabsTrigger value="web">Web</TabsTrigger>
+  </TabsList>
+</div>
 
             <TabsContent value={activeTab} className="mt-8">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

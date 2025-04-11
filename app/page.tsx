@@ -5,6 +5,7 @@ import ExperienceSection from "@/components/experience-section"
 import ProjectsSection from "@/components/projects-section"
 import SkillsSection from "@/components/skills-section"
 import ContactSection from "@/components/contact-section"
+import GraphicDesignPreview from "@/components/graphic-design-preview"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
+      <GraphicDesignPreview />
       <SkillsSection />
       <ContactSection />
       <Footer />
