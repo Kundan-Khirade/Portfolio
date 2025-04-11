@@ -71,9 +71,9 @@ export default function ProjectsSection() {
     },
     {
       id: "youtube-creator-branding",
-      title: "YouTube Creator ",
-      category: "graphic",
-      image: "/logoo.jpg",
+      title: "PromptPDF Website ",
+      category: "web",
+      image: "/Prompt pdf Cover.png",
       description:
         "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
       tags: ["Branding", "Thumbnails", "Visual Identity"],
