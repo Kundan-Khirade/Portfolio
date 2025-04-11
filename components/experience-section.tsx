@@ -17,48 +17,57 @@ export default function ExperienceSection() {
   const experiences = [
     {
       title: "Lead UI/UX Designer",
-      company: "App Team NIT Hamirpur",
+      company: "App Team, NIT Hamirpur",
       period: "2021 - Present",
       description:
-        "Led the design and development of three mobile applications now live on the Play Store. Conducted user research, created wireframes, prototypes, and visual designs. Collaborated with developers and mentored junior designers.",
+        "Led the design and development of three mobile applications published on the Play Store. Conducted user research, created wireframes, prototypes, and visual designs. Collaborated with developers and mentored junior designers.",
       skills: ["User Research", "Wireframing", "Prototyping", "Visual Design", "Team Leadership"],
       color: "from-purple-500 to-pink-500",
     },
     {
-      title: "UI/UX Designer",
-      company: "Sorted Tech",
-      period: "2023",
+      title: "Design Team Member",
+      company: "Training & Placement Cell, NIT Hamirpur",
+      period: "2024 - Present",
       description:
-        "Designed and developed a fully functional live website from scratch, aligned with the brand's identity and optimized for user experience.",
-      skills: ["Website Design", "Brand Alignment", "UX Optimization", "Frontend Development"],
-      color: "from-cyan-500 to-blue-500",
+        "Designed visuals for campus placements, recruitment drives, and training events. Created posters, digital assets, and social media creatives to represent the institute’s professional identity and outreach efforts.",
+      skills: ["Campaign Design", "Event Graphics", "Institutional Branding", "Poster Design", "Social Media Creatives"],
+      color: "from-rose-500 to-red-500",
     },
     {
-      title: "UI/UX Designer",
-      company: "BharatPros",
-      period: "2022",
-      description:
-        "Contributed to both website and mobile app design with a focus on cross-platform consistency and seamless user flows.",
-      skills: ["Cross-platform Design", "User Flows", "Mobile App Design", "Web Design"],
-      color: "from-emerald-500 to-teal-500",
-    },
-    {
-      title: "Freelance Graphic Designer",
-      company: "Self-employed",
+      title: "Freelance Designer",
+      company: "Self-Employed",
       period: "2018 - Present",
       description:
-        "Worked with various YouTube creators to craft engaging thumbnails, posters, and brand visuals that enhance content visibility and storytelling.",
-      skills: ["Thumbnails", "Posters", "Brand Visuals", "Content Strategy"],
+        "Worked with a range of clients, including YouTube creators and startups, delivering everything from eye-catching thumbnails and posters to complete UI/UX solutions for web and mobile. Balanced creative storytelling with functional design to boost content visibility and user engagement.",
+      skills: ["Branding", "Photoshop", "Content Strategy", "Thumbnail Design", "Logo", "Poster Design", "Social Media"],
       color: "from-amber-500 to-orange-500",
     },
     {
-      title: "Design Team Member",
-      company: "Training & Placement Cell, NIT Hamirpur",
-      period: "2021 - Present",
+      title: "UI Designer Intern",
+      company: "BharatPros",
+      period: "July - Sept 2024",
       description:
-        "Created impactful visuals for campus recruitment campaigns, training sessions, and student outreach events.",
-      skills: ["Campaign Design", "Event Graphics", "Institutional Branding"],
-      color: "from-rose-500 to-red-500",
+        "Designed web and mobile interfaces from the ground up, ensuring cohesive and intuitive user experiences. Maintained visual consistency aligned with brand identity, and collaborated with cross-functional teams to deliver polished, user-friendly designs within tight deadlines.",
+      skills: ["UI Design", "Mobile App Design", "Responsive Web Design", "Figma", "Design Consistency", "Cross-functional Collaboration"],
+      color: "from-emerald-500 to-teal-500",
+    },
+    {
+      title: "UI/UX Designer Intern",
+      company: "Sorted Tech",
+      period: "Jan - June 2024",
+      description:
+        "Designed and developed a fully functional website from the ground up, aligning visuals and structure with the brand’s identity. Conducted user research to shape intuitive user flows and collaborated closely with developers to ensure smooth implementation and timely launch.",
+      skills: ["Website Design", "Brand Alignment", "User Research", "Figma", "UX Optimization", "Frontend Development"],
+      color: "from-cyan-500 to-blue-500",
+    },
+    {
+      title: "Joint Secretary – Mess Committee",
+      company: "Neelkanth Boys Hostel, NIT Hamirpur",
+      period: "2022 - 2023",
+      description:
+        "Oversaw daily operations of the hostel mess serving over 550 students, demonstrating strong leadership and organizational skills. Managed budgeting, meal planning, and vendor coordination, while ensuring timely resolution of student concerns. Led a team of mess workers, streamlined billing processes, and maintained quality and efficiency in service delivery.",
+      skills: ["Leadership", "Team Management", "Budget Handling","Public Speaking",  "Effective Communication", "Conflict Resolution", "Decision Making" ],
+      color: "from-indigo-500 to-fuchsia-500",
     },
   ]
 
@@ -73,7 +82,7 @@ export default function ExperienceSection() {
             My Professional <span className="gradient-text">Journey</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Over 8 years of experience in design, from freelancing to leading design teams.
+            Over 4+ years of experience in design, from freelancing to leading design teams.
           </p>
         </div>
 

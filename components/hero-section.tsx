@@ -25,10 +25,9 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Hi, I'm <span className="gradient-text">Kundan Khirade</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-muted-foreground">UI/UX Designer</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-muted-foreground">UI/UX Designer | Graphic Designer</h2>
           <p className="text-lg mb-8 max-w-lg">
-            With 8 years of design experience, I create meaningful digital experiences that blend aesthetics with
-            usability to solve real-world problems.
+          I specialize in transforming ideas into clean, functional designs that solve real problems. With 4+ years of collective experience, I’ve designed and launched mobile and web apps, and improved usability through thoughtful UX decisions.
           </p>
 
           <div className="flex flex-wrap gap-4">

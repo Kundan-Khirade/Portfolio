@@ -55,8 +55,8 @@ export default function ContactSection() {
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
                     <p className="text-muted-foreground text-sm mb-2">Call me directly</p>
-                    <a href="tel:+919876543210" className="text-primary hover:underline">
-                      +91 98765 43210
+                    <a href="tel:+918767889039" className="text-primary hover:underline">
+                      +91 87678 89039
                     </a>
                   </div>
                 </CardContent>
@@ -70,7 +70,7 @@ export default function ContactSection() {
                   <div>
                     <h3 className="font-bold mb-1">Location</h3>
                     <p className="text-muted-foreground text-sm mb-2">Based in</p>
-                    <p>NIT Hamirpur, Himachal Pradesh, India</p>
+                    <p>Thane, Maharashtra, India.</p>
                   </div>
                 </CardContent>
               </Card>

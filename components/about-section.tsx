@@ -22,8 +22,7 @@ export default function AboutSection() {
             Passionate <span className="gradient-text">Designer</span> & Problem Solver
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            I'm a final-year B.Tech CSE student at NIT Hamirpur, India, with a deep passion for design that solves
-            real-world problems.
+          I'm a final-year B.Tech CSE student at NIT Hamirpur, India, passionate about crafting clean, user-centered designs that solve real problems and enhance everyday experiences.
           </p>
         </div>
 
@@ -31,16 +30,28 @@ export default function AboutSection() {
           <div
             className={`transition-all duration-700 delay-100 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <h3 className="text-2xl font-bold mb-4">My Design Philosophy</h3>
+            <h3 className="text-2xl font-bold mb-4">My Design Process</h3>
             <p className="text-muted-foreground mb-6">
-              I believe that great design is not just about aesthetics, but about creating meaningful experiences that
-              solve real problems. My approach combines user-centered thinking with creative problem-solving to deliver
-              designs that are both beautiful and functional.
+            I like to keep my design process simple, flexible, and user-focused. Every project is different, but here's how I usually approach it:
+
             </p>
-            <p className="text-muted-foreground">
-              With 8 years of collective experience across UI/UX, product design, and graphic design, I've developed a
-              holistic understanding of the design process from research to implementation.
+            <p className="text-muted-foreground mt-2">
+            <span className="font-bold">1. Understand the Problem -</span> I start by learning about the problem through research, user insights, and asking the right questions.
             </p>
+            <p className="text-muted-foreground mt-2">
+            <span className="font-bold">2. Define - </span> Once I have clarity, I define the key user personas, map out user journeys, and identify the core problems. This step sets a clear direction for design.
+            </p>
+            <p className="text-muted-foreground mt-2">
+            <span className="font-bold">3. Explore Ideas - </span> I sketch, wireframe, and explore multiple ideas. I enjoy experimenting with layouts and interactions to see what feels natural and intuitive for the user.
+            </p>
+            <p className="text-muted-foreground mt-2">
+            <span className="font-bold">4. Design - </span> After locking in a direction, I move into high-fidelity design, while keeping things clean, accessible, and visually consistent. I usually work in Figma and build out components if needed.
+            </p>
+            
+            <p className="text-muted-foreground mt-2">
+            <span className="font-bold">5. Test & Iterate - </span> I conduct usability testing, gather feedback, and iterate quickly to improve the design. Based on what I learn, I tweak and improve the design before it moves to development.
+            </p>
+            
           </div>
 
           <div
@@ -63,7 +74,7 @@ export default function AboutSection() {
                     <Brush className="h-6 w-6 text-primary" />
                   </div>
                   <h4 className="font-bold mb-2">Graphic Design</h4>
-                  <p className="text-sm text-muted-foreground">Crafting visually compelling brand assets</p>
+                  <p className="text-sm text-muted-foreground">Crafting visually compelling Brand assets</p>
                 </CardContent>
               </Card>
 
@@ -99,9 +110,9 @@ export default function AboutSection() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
               <h4 className="font-bold text-lg">B.Tech in Computer Science & Engineering</h4>
-              <p className="text-muted-foreground">National Institute of Technology, Hamirpur</p>
+              <p className="text-muted-foreground">National Institute of Technology, Hamirpur, India</p>
             </div>
-            <Badge variant="secondary">2020 - 2024</Badge>
+            <Badge variant="secondary">2021 - 2025</Badge>
           </div>
         </div>
       </div>

@@ -30,13 +30,61 @@ const projects = [
     id: "sorted-tech-website",
     title: "Sorted Tech Website",
     category: "web",
-    image: "/modern-tech-dark-responsive.png",
+    image: "Sorted Tech Cover Pic 4.png",
     description:
-      "A fully responsive website designed and developed from scratch for a tech startup, featuring modern UI elements and smooth interactions.",
-    tags: ["Web Design", "Frontend", "React"],
+      "An website built to showcase AI-powered recycling and real-time waste management solutions.",
+    tags: ["UI/UX", "Web Design", "UX Design", "SaaS Product"],
     links: {
-      live: "https://example.com",
-      github: "https://github.com",
+      live: "https://www.sortedtech.io/",
+    
+    },
+  },
+  {
+    id: "hill-ffair-app",
+    title: "HILL’FFAIR 2k22 APP",
+    category: "mobile",
+    image: "Hill ffair 2022 cover.jpg",
+    description:
+      "An immersive mobile app designed for NIT Hamirpur’s annual cultural fest, featuring event listings, real-time updates, interactive social feed, and society promotions—all in one engaging experience.",
+    tags: ["UI/UX Design", "Mobile App Design", "Figma", "Community Engagement", "EdTech"],
+    links: {
+     
+    },
+  },
+  {
+    id: "vaani-sudhar-app",
+    title: "Vaani Sudhar App",
+    category: "mobile",
+    image: "/Vaani Sudhar cover.jpg",
+    description:
+      "An interactive Hindi speech therapy app designed for children aged 2–5, helping them improve articulation through playful, voice-guided learning.",
+    tags: ["Mobile Design", "Speech Therapy", "UX Research", "Kids App", "EdTech", "UI Design"],
+    links: {
+
+    },
+  },
+  {
+    id: "uber-website",
+    title: "Uber Website Layout",
+    category: "web",
+    image: "/uber cover.png",
+    description:
+      "A pixel-perfect clone of Uber’s official website, built from scratch with a focus on responsive design, layout accuracy, and performance optimization.",
+    tags: ["Web Design", "Frontend Development", "Responsive UI", "UI Cloning", "Web Performance"],
+    links: {
+
+    },
+  },
+  {
+    id: "youtube-creator-branding",
+    title: "YouTube Creator Branding",
+    category: "graphic",
+    image: "/logoo.jpg",
+    description:
+      "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
+    tags: ["Branding", "Thumbnails", "Visual Identity"],
+    links: {
+      live: "https://youtube.com",
     },
   },
   {
@@ -56,7 +104,7 @@ const projects = [
     id: "youtube-creator-branding",
     title: "YouTube Creator Branding",
     category: "graphic",
-    image: "/vibrant-youtube-branding.png",
+    image: "/logoo.jpg",
     description:
       "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
     tags: ["Branding", "Thumbnails", "Visual Identity"],
