@@ -6,10 +6,13 @@ import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Menu, X } from "lucide-react"
 import { scrollToElement } from "@/utils/scroll-utils"
+import { usePathname, useRouter } from "next/navigation"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +22,17 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const handleNavigation = (section: string) => {
+    if (pathname === "/") {
+      // If on home page, scroll to section
+      scrollToElement(section)
+    } else {
+      // If on another page, navigate to home and then scroll to section
+      router.push(`/#${section}`)
+    }
+    setIsMenuOpen(false)
+  }
 
   return (
     <header
@@ -33,15 +47,43 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {["about", "experience", "projects", "skills", "contact"].map((section) => (
-            <button
-              key={section}
-              onClick={() => scrollToElement(section)}
-              className="text-sm font-medium hover:text-primary transition-colors capitalize"
-            >
-              {section}
-            </button>
-          ))}
+          <button
+            onClick={() => handleNavigation("about")}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            About
+          </button>
+          <button
+            onClick={() => handleNavigation("experience")}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Experience
+          </button>
+          <button
+            onClick={() => handleNavigation("projects")}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Projects
+          </button>
+         
+          <button
+            onClick={() => handleNavigation("graphic-design")}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Graphics
+          </button>
+          <button
+            onClick={() => handleNavigation("skills")}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Skills
+          </button>
+          <button
+            onClick={() => handleNavigation("contact")}
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Contact
+          </button>
           <Button variant="default" size="sm" className="ml-4">
             Resume
           </Button>
@@ -61,18 +103,43 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-lg p-4">
           <nav className="flex flex-col space-y-4">
-            {["about", "experience", "projects", "skills", "contact"].map((section) => (
-              <button
-                key={section}
-                onClick={() => {
-                  scrollToElement(section)
-                  setIsMenuOpen(false)
-                }}
-                className="text-sm font-medium hover:text-primary transition-colors p-2 text-left capitalize"
-              >
-                {section}
-              </button>
-            ))}
+            <button
+              onClick={() => handleNavigation("about")}
+              className="text-sm font-medium hover:text-primary transition-colors p-2 text-left"
+            >
+              About
+            </button>
+            <button
+              onClick={() => handleNavigation("experience")}
+              className="text-sm font-medium hover:text-primary transition-colors p-2 text-left"
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => handleNavigation("projects")}
+              className="text-sm font-medium hover:text-primary transition-colors p-2 text-left"
+            >
+              Projects
+            </button>
+           
+            <button
+              onClick={() => handleNavigation("graphic-design")}
+              className="text-sm font-medium hover:text-primary transition-colors p-2 text-left"
+            >
+              Graphics
+            </button>
+            <button
+              onClick={() => handleNavigation("skills")}
+              className="text-sm font-medium hover:text-primary transition-colors p-2 text-left"
+            >
+              Skills
+            </button>
+            <button
+              onClick={() => handleNavigation("contact")}
+              className="text-sm font-medium hover:text-primary transition-colors p-2 text-left"
+            >
+              Contact
+            </button>
             <Button variant="default" size="sm" className="w-full">
               Resume
             </Button>
