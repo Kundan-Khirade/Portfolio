@@ -27,7 +27,7 @@ export default function ProjectsSection() {
       image: "Sorted Tech Cover Pic 4.png",
       description:
         "An website built to showcase AI-powered recycling and real-time waste management solutions.",
-      tags: ["UI/UX", "Web Design", "UX Design", "SaaS Product", "Figma"],
+      tags: ["UI/UX", "Web Design", "UX Design", "SaaS Product"],
       links: {
         live: "https://www.sortedtech.io/",
       
@@ -70,39 +70,39 @@ export default function ProjectsSection() {
       },
     },
     {
-      id: "promptpdf",
-      title: "PromptPDF Website ",
+      id: "prompt-pdf",
+      title: "PromptPDF Website",
       category: "web",
       image: "/Prompt pdf Cover.png",
       description:
         "Designed the user interface for PromptPDF, an AI-driven platform that enables users to generate professional documents effortlessly across various formats.",
-      tags: ["UI Design", "UX Design", "Figma", "AI SaaS", "Web App", "Responsive Design","Prototyping"],
+      tags: ["UI Design", "UX Design", "Figma", "AI SaaS", "Web App","Responsive Design", "Prototyping"],
       links: {
         live: "https://promptpdf.vercel.app/",
       },
     },
     {
-      id: "nith-career-compass",
+      id: "nith-career-website",
       title: "NITH Career Compass Website",
       category: "web",
       image: "/NITH career compass cover.jpg",
       description:
         "A collaborative platform connecting placed students with juniors, sharing real placement journeys, tips, and insights across on-campus and off-campus experiences.",
-      tags: ["UX Design", "UI Design", "Web Platform", "Community Building", "Figma", "Responsive Design"],
+      tags: ["UX Design", "UI Design", "Web Platform", "Community Building",  "Figma",  "Responsive Design"],
       links: {
         live: "https://nithcc.vercel.app/",
       },
     },
     {
-      id: "design-system",
-      title: "Design System",
-      category: "ui",
-      image: "/placeholder.svg?height=600&width=800",
+      id: "bharat-pros",
+      title: "BharatPro Website",
+      category: "web",
+      image: "/Bharatpros cover.jpg",
       description:
-        "Comprehensive design system with reusable components, style guides, and documentation for consistent product development.",
-      tags: ["Design System", "Components", "Documentation"],
+        "A responsive service marketplace platform designed to seamlessly connect users with verified professionals across India—featuring intuitive navigation, scalable design systems, and a clean, modern UI.",
+      tags: ["E-commerce", "Marketplace Design", "UI/UX Design", "User Research", "Figma", "Responsive Web Design", "Design Systems"],
       links: {
-        github: "https://github.com",
+        live: "https://www.bharatpros.com/",
       },
     },
   ]
@@ -125,13 +125,15 @@ export default function ProjectsSection() {
         </div>
 
         <Tabs defaultValue="all" className="mb-12" onValueChange={setActiveTab}>
-        <div className="flex justify-center">
-  <TabsList className="grid w-full max-w-md grid-cols-3"> {/* Changed to 3 columns since you have 3 tabs */}
-    <TabsTrigger value="all">All</TabsTrigger>
-    <TabsTrigger value="mobile">Mobile</TabsTrigger>
-    <TabsTrigger value="web">Web</TabsTrigger>
-  </TabsList>
-</div>
+          <div className="flex justify-center">
+            <TabsList className="grid grid-cols-5 w-full max-w-md">
+              <TabsTrigger value="all">All</TabsTrigger>
+              <TabsTrigger value="mobile">Mobile</TabsTrigger>
+              <TabsTrigger value="web">Web</TabsTrigger>
+              <TabsTrigger value="graphic">Graphic</TabsTrigger>
+              <TabsTrigger value="ui">UI/UX</TabsTrigger>
+            </TabsList>
+          </div>
 
           <TabsContent value={activeTab} className="mt-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

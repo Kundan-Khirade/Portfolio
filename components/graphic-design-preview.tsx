@@ -1,5 +1,5 @@
 
-  "use client"
+"use client"
 
 import { useInView } from "react-intersection-observer"
 import Image from "next/image"
@@ -13,24 +13,24 @@ import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-mo
 
 // Featured graphic designs for the home page preview
 const featuredDesigns = [
-    {
-        id: 1,
-        title: "Tech Conference Poster",
-        category: "Poster Design",
-        thumbnail: "modern-tech-dark-responsive.png",
-      },
-      {
-        id: 2,
-        title: "Brand Identity System",
-        category: "Branding",
-        thumbnail: "mobile-service-dashboard.png",
-      },
-      {
-        id: 3,
-        title: "Product Packaging",
-        category: "Packaging",
-        thumbnail: "purple-app-dashboard.png",
-      },
+  {
+    id: 1,
+    title: "YouTube Thumbnail",
+    category: "Poster Design",
+    thumbnail: "Youtube Thumbnail 1.jpg",
+  },
+  {
+    id: 2,
+    title: "Brand Identity System",
+    category: "Branding",
+    thumbnail: "mobile-service-dashboard.png",
+  },
+  {
+    id: 3,
+    title: "Product Packaging",
+    category: "Packaging",
+    thumbnail: "purple-app-dashboard.png",
+  },
   {
     id: 4,
     title: "Social Media Campaign",
@@ -231,9 +231,8 @@ export default function GraphicDesignPreview() {
               {featuredDesigns.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-8 h-1 rounded-full transition-all ${
-                    index === featuredIndex ? "bg-white" : "bg-white/30"
-                  }`}
+                  className={`w-8 h-1 rounded-full transition-all ${index === featuredIndex ? "bg-white" : "bg-white/30"
+                    }`}
                   onClick={() => setFeaturedIndex(index)}
                 />
               ))}
@@ -246,9 +245,8 @@ export default function GraphicDesignPreview() {
           {featuredDesigns.map((design, index) => (
             <div
               key={design.id}
-              className={`transition-all duration-700 delay-${(index % 3) * 100} ${
-                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              } perspective ${design.id === 4 ? "md:col-span-2 md:row-span-2" : ""}`}
+              className={`transition-all duration-700 delay-${(index % 3) * 100} ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                } perspective ${design.id === 4 ? "md:col-span-2 md:row-span-2" : ""}`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >

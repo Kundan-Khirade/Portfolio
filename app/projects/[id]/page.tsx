@@ -229,56 +229,54 @@ const projectsData = [
     gallery: ["/Sorted tech Galary 1.png", "/Sorted tech Galary 2.png", "/Sorted tech Galary 3.png"],
   },
   {
-    id: "bharatpros-mobile-app",
-    title: "BharatPros Mobile App",
+    id: "prompt-pdf",
+    title: "PromptPDF Website",
     category: "mobile",
-    image: "/mobile-service-dashboard.png",
+    image: "/Prompt pdf Cover.png",
     description:
-      "Cross-platform mobile application with seamless user flows and consistent design language across iOS and Android.",
-    tags: ["Mobile Design", "Flutter", "UX Research"],
+      "Designed the user interface for PromptPDF, an AI-driven platform that enables users to generate professional documents effortlessly across various formats.",
+    tags: ["UI Design", "UX Design", "Figma", "AI SaaS", "Web App","Responsive Design", "Prototyping"],
     links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
+      live: "https://promptpdf.vercel.app/",
     },
-    client: "BharatPros",
-    date: "2022",
+    client: "PromptPDF",
+    date: "Feb - March 2025",
     role: "UI/UX Designer",
     fullDescription: [
-      "BharatPros required a cross-platform mobile application that would connect skilled professionals with customers needing various services. The challenge was to create a consistent user experience across both iOS and Android platforms while accommodating the unique design patterns of each operating system.",
-      "I designed a comprehensive mobile application with intuitive user flows for both service providers and customers. The design focused on simplifying the process of finding, booking, and paying for services, with special attention to the onboarding experience for new users.",
-      "The app features a clean, accessible interface with a consistent design language that maintains platform-specific interactions where appropriate. The result is a seamless experience that feels native on both iOS and Android devices.",
+      "PromptPDF is an AI-powered web application designed to streamline the way users interact with PDF documents. The platform allows users to upload any PDF and instantly ask questions about its contents, receiving context-aware, intelligent answers—making it especially useful for research, legal, academic, or corporate documentation.",
+      "As the UI/UX Designer for PromptPDF, I was responsible for designing a clean, intuitive, and accessible user interface that made complex AI functionalities feel effortless and easy to use. My primary goal was to ensure that the design aligned with the modern SaaS aesthetic while prioritizing functionality and responsiveness across devices.",
+      "I worked closely with the development team to craft user flows, refine interaction patterns, and implement a minimal yet engaging visual language. From landing page to dashboard design, I focused on user trust, clear CTAs, and a frictionless onboarding experience. The final product delivers a seamless PDF chat experience, built to scale and optimized for usability.",
     ],
     process: [
       {
-        title: "User Research",
+        title: "User Research & Requirement Gathering",
         description:
-          "Conducted interviews with potential users from both customer and service provider segments to understand their needs and expectations.",
+          "Conducted interviews and surveys to understand user needs, pain points, and expectations from an AI-driven document generator.",
       },
       {
-        title: "Competitive Analysis",
+        title: "Wireframing & Prototyping",
         description:
-          "Analyzed similar apps in the market to identify best practices and opportunities for differentiation.",
+          "Developed low-fidelity wireframes to map out user flows, followed by high-fidelity prototypes in Figma to visualize the final design.",
       },
       {
-        title: "User Flow Mapping",
-        description: "Created detailed user flows for key tasks to ensure a logical and efficient path to completion.",
+        title: "UI Design & Branding",
+        description: "Created a clean and modern visual language that aligns with the brand's identity, ensuring consistency across all interface elements.",
       },
       {
-        title: "UI Design",
-        description: "Developed a consistent design system with platform-specific adaptations where necessary.",
+        title: "Usability Testing & Iteration",
+        description: "Performed usability tests with a diverse group of users to gather feedback, leading to iterative improvements in the design.",
       },
       {
-        title: "Usability Testing",
-        description: "Conducted testing sessions with users on both iOS and Android devices to refine the experience.",
+        title: "Developer Handoff & Collaboration",
+        description: "Prepared detailed design specifications and collaborated closely with the development team to ensure accurate implementation of the designs.",
       },
     ],
     outcomes: [
-      "Successfully launched on both App Store and Google Play with consistent 4.5+ star ratings",
-      "Onboarded 500+ service providers in the first three months",
-      "Achieved 20,000+ app downloads within six months of launch",
-      "Maintained a 70% user retention rate after 30 days",
+      "Enhanced User Engagement: Positive user feedback highlighted the platform's ease of use and efficient workflow.",
+      "Streamlined Document Creation: Users reported a significant reduction in time spent on document formatting and editing.",
+      "Scalable Design System: Established a cohesive design system that supports future feature expansions and maintains brand consistency.",
     ],
-    gallery: ["/service-provider-list.png", "/service-booking-blue-ui.png", "/service-payment-confirmation.png"],
+    gallery: ["/Prompt pdf 1.png", "/Prompt pdf 2.PNG"],
   },
   {
     id: "uber-website",
@@ -330,69 +328,17 @@ const projectsData = [
     gallery: ["/Uber 1.png", "/Uber 2.png"],
   },
   {
-    id: "promptpdf",
-    title: "PromptPDF Website",
-    category: "web",
-    image: "/Prompt pdf Cover.png",
-    description:
-      "Designed the user interface for PromptPDF, an AI-driven platform that enables users to generate professional documents effortlessly across various formats.",
-    tags: ["UI Design", "UX Design", "Figma", "AI SaaS", "Web App", "Responsive Design","Prototyping"],
-    links: {
-      live: "https://promptpdf.vercel.app/",
-    },
-    client: "PromptPDF",
-    date: "Feb - March 2024",
-    role: "UI/UX Designer",
-    fullDescription: [
-      "PromptPDF is an AI-powered web application designed to streamline the way users interact with PDF documents. The platform allows users to upload any PDF and instantly ask questions about its contents, receiving context-aware, intelligent answers—making it especially useful for research, legal, academic, or corporate documentation.",
-      "As the UI/UX Designer for PromptPDF, I was responsible for designing a clean, intuitive, and accessible user interface that made complex AI functionalities feel effortless and easy to use. My primary goal was to ensure that the design aligned with the modern SaaS aesthetic while prioritizing functionality and responsiveness across devices.",
-      "I worked closely with the development team to craft user flows, refine interaction patterns, and implement a minimal yet engaging visual language. From landing page to dashboard design, I focused on user trust, clear CTAs, and a frictionless onboarding experience. The final product delivers a seamless PDF chat experience, built to scale and optimized for usability.",
-    ],
-    process: [
-      {
-        title: "User Research & Requirement Gathering",
-        description:
-          "Conducted interviews and surveys to understand user needs, pain points, and expectations from an AI-driven document generator.",
-      },
-      {
-        title: "Wireframing & Prototyping",
-        description:
-          "Developed low-fidelity wireframes to map out user flows, followed by high-fidelity prototypes in Figma to visualize the final design.",
-      },
-      {
-        title: "UI Design & Branding",
-        description: "Created a clean and modern visual language that aligns with the brand's identity, ensuring consistency across all interface elements.",
-      },
-      {
-        title: "Usability Testing & Iteration",
-        description:
-          "Performed usability tests with a diverse group of users to gather feedback, leading to iterative improvements in the design.",
-      },
-      {
-        title: "Developer Handoff & Collaboration",
-        description:
-          "Prepared detailed design specifications and collaborated closely with the development team to ensure accurate implementation of the designs.",
-      },
-    ],
-    outcomes: [
-      "Enhanced User Engagement: Positive user feedback highlighted the platform's ease of use and efficient workflow.",
-      "Streamlined Document Creation: Users reported a significant reduction in time spent on document formatting and editing.",
-      "Scalable Design System: Established a cohesive design system that supports future feature expansions and maintains brand consistency.",
-    ],
-    gallery: ["/Prompt pdf 1.png", "/Prompt pdf.png", "/Prompt pdf 2.png"],
-  },
-  {
-    id: "nith-career-compass",
+    id: "nith-career-website",
     title: "NITH Career Compass Website",
     category: "web",
     image: "/NITH career compass cover.jpg",
     description:
       "A collaborative platform connecting placed students with juniors, sharing real placement journeys, tips, and insights across on-campus and off-campus experiences.",
-    tags: ["UX Design", "UI Design", "Web Platform", "Community Building", "Figma", "Responsive Design"],
+    tags: ["UX Design", "UI Design", "Web Platform", "Community Building",  "Figma",  "Responsive Design"],
     links: {
       live: "https://nithcc.vercel.app/",
     },
-    client: "NIT Hamirpur- Training & Placement Office",
+    client: "NIT Hamirpur- Training & Placement Cell",
     date: "April - May 2025",
     role: "UI/UX Designer",
     fullDescription: [
@@ -403,7 +349,8 @@ const projectsData = [
     process: [
       {
         title: "Understanding the Gap",
-        description: "We conducted informal interviews and surveys with juniors and seniors to understand their struggles in finding real placement experiences and prep materials tailored to NITH students.",
+        description:
+          "We conducted informal interviews and surveys with juniors and seniors to understand their struggles in finding real placement experiences and prep materials tailored to NITH students.",
       },
       {
         title: "Experience Mapping",
@@ -416,7 +363,8 @@ const projectsData = [
       },
       {
         title: "UI Development Collaboration",
-        description: "While the dev team handled backend submissions and deployment, I closely collaborated to ensure pixel-perfect UI integration and maintained responsiveness across devices.",
+        description:
+          "While the dev team handled backend submissions and deployment, I closely collaborated to ensure pixel-perfect UI integration and maintained responsiveness across devices.",
       },
       {
         title: "Scalability & Future Scope",
@@ -429,10 +377,61 @@ const projectsData = [
       "Fostered inter-batch interaction and network-building within the NIT Hamirpur community.",
       "Increased average user engagement time to over 3 minutes per session with effective navigation and content discovery.",
     ],
+    gallery: ["/NITH career compass.png", "/NITH career compass 2.png", "/NITH career compass 3.png"],
+  },
+  {
+    id: "bharat-pros",
+    title: "BharatPro Website",
+    category: "web",
+    image: "/Bharatpros cover.jpg",
+    description:
+      "A responsive service marketplace platform designed to seamlessly connect users with verified professionals across India—featuring intuitive navigation, scalable design systems, and a clean, modern UI.",
+    tags: ["E-commerce", "Marketplace Design", "UI/UX Design", "User Research", "Figma", "Responsive Web Design", "Design Systems"],
+    links: {
+      live: "https://www.bharatpros.com/",
+    },
+    client: "BharatPros",
+    date: "July - Sept 2024",
+    role: "UI Designer Intern",
+    fullDescription: [
+      "BharatPros is an emerging digital marketplace that connects skilled Indian freelancers and businesses with clients across the globe. With a vision to empower local talent and streamline the hiring process, the platform focuses on building trust through verified profiles, secure transactions, and a seamless user experience. The core objective was to present a scalable and professional platform that can compete with global freelance marketplaces while keeping its Indian identity intact.",
+      "As the UI/UX Designer for this project, my role involved designing key user flows and enhancing usability across the platform—from the homepage and service listings to profile dashboards and payment modules. I focused on creating a clean, intuitive interface with clear navigation, a consistent design system, and components that support both desktop and mobile responsiveness. Special attention was given to visual hierarchy, accessibility, and conversion-oriented design choices, especially on critical pages like service listings and checkout flows.",
+      "To ensure the platform met modern product standards, I conducted competitive analysis and usability audits, integrating feedback loops from early users. The result is a user-centered marketplace that not only supports seamless hiring and service delivery but also reflects trust, professionalism, and the spirit of a growing digital India. BharatPros is currently evolving, with plans to expand into niche service categories and further optimize engagement and conversion rates through iterative design improvements.",
+    ],
+    process: [
+      {
+        title: "Research & Discovery",
+        description: "Conducted market research to understand the needs of both service providers and seekers, identifying pain points in existing solutions.",
+      },
+      {
+        title: "Wireframing & Prototyping",
+        description:
+          "Developed wireframes to map out user flows, followed by high-fidelity prototypes in Figma to visualize the final design.",
+      },
+      {
+        title: "Visual Design & Branding",
+        description: "Created a cohesive visual identity that reflects the platform's mission, ensuring consistency across all interface elements.",
+      },
+      {
+        title: "Usability Testing & Iteration",
+        description: "Performed usability tests with target users to gather feedback, leading to iterative improvements in the design.",
+      },
+      {
+        title: "Developer Collaboration",
+        description:
+          "Worked closely with developers to ensure accurate implementation of the design, addressing any challenges promptly.",
+      },
+    ],
+    outcomes: [
+      "Enhanced User Engagement: The intuitive design led to increased user interaction and time spent on the platform.",
+      "Increased Service Provider Registrations: A streamlined registration process encouraged more professionals to join the platform.",
+      "Positive User Feedback: Users reported satisfaction with the ease of finding and booking services.",
+      "Scalable Design System: Established a design framework that supports future feature additions and platform scalability.",
+    ],
     gallery: [
-      "/NITH career compass.png",
-      "/NITH career compass 2.png",
-      "/NITH career compass 3.png",
+      "/BharatPros 1.png",
+      "/BharatPros 2.png",
+      "/BharatPros 3.png",
     ],
   },
   {

@@ -20,25 +20,14 @@ export default function Footer() {
 
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
               <Link href="https://www.linkedin.com/in/kundankhirade" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </Button>
               </Link>
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </Button>
-              </Link>
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              
+              <Link href="https://www.instagram.com/kundankhirade/" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
                   <Instagram className="h-5 w-5" />
                   <span className="sr-only">Instagram</span>
