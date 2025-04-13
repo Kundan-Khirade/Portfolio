@@ -14,19 +14,6 @@ import { useState } from "react"
 // This would typically come from a database or API
 const projects = [
   {
-    id: "nit-hamirpur-app",
-    title: "NIT Hamirpur App",
-    category: "mobile",
-    image: "/vibrant-purple-app.png",
-    description:
-      "Official mobile application for NIT Hamirpur students with features for campus updates, academic resources, and event notifications.",
-    tags: ["UI/UX", "Mobile App", "React Native"],
-    links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
-    },
-  },
-  {
     id: "sorted-tech-website",
     title: "Sorted Tech Website",
     category: "web",
@@ -100,6 +87,30 @@ const projects = [
     },
   },
   {
+    id: "e-commerce",
+    title: "E-Commerce Website",
+    category: "web",
+    image: "/E-Commerce Cover.png",
+    description:
+      "A modern, conversion-focused e-commerce website designed from scratch with user-centric features, responsive UI, and a seamless shopping experience tailored for today’s online retail expectations.",
+    tags: ["E-Commerce", "UI/UX Design", "Product Design", "Figma", "User Flow", "Web", "Design System"],
+    links: {
+     
+    },
+  },
+  {
+    id: "nimbus-2022",
+    title: "Nimbus 2k22 APP",
+    category: "mobile",
+    image: "/Nimbus 2k22 Cover.png",
+    description:
+      "Designed and led the development of Nimbus 2022 — an all-in-one mobile app for NIT Hamirpur’s annual technical fest, enabling real-time updates, event tracking, and student engagement through modern social features and intuitive UX.",
+    tags: ["Mobile", "UX/UI", "Figma", "Gamification", "Community Engagement", "Android App Design", "Design Systems", "Product Thinking"],
+    links: {
+     
+    },
+  },
+  {
     id: "bharat-pros",
     title: "BharatPro Website",
     category: "web",
@@ -112,140 +123,18 @@ const projects = [
     },
   },
   {
-    id: "youtube-creator-branding",
-    title: "YouTube Creator Branding",
-    category: "graphic",
-    image: "/logoo.jpg",
-    description:
-      "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
-    tags: ["Branding", "Thumbnails", "Visual Identity"],
-    links: {
-      live: "https://youtube.com",
-    },
-  },
-  {
-    id: "bharatpros-mobile-app",
-    title: "BharatPros Mobile App",
+    id: "nimbus-2023",
+    title: "Nimbus 2k23 APP",
     category: "mobile",
-    image: "/mobile-service-dashboard.png",
+    image: "/Nimbus 2k23 Cover.png",
     description:
-      "Cross-platform mobile application with seamless user flows and consistent design language across iOS and Android.",
-    tags: ["Mobile Design", "Flutter", "UX Research"],
+      "Official mobile app for NIT Hamirpur's tech fest, designed to deliver personalized schedules, real-time updates, quizzes, and a social feed — enhancing engagement for 5,000+ users.",
+    tags: ["Mobile App Design", "UI/UX", "Figma", "User Engagement", "Event App", "College Fest", "Community Building"],
     links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
+      
     },
   },
-  {
-    id: "youtube-creator-branding",
-    title: "YouTube Creator Branding",
-    category: "graphic",
-    image: "/logoo.jpg",
-    description:
-      "Complete brand identity and thumbnail design system for a YouTube channel with over 100K subscribers.",
-    tags: ["Branding", "Thumbnails", "Visual Identity"],
-    links: {
-      live: "https://youtube.com",
-    },
-  },
-  {
-    id: "campus-recruitment-portal",
-    title: "Campus Recruitment Portal",
-    category: "web",
-    image: "/recruitment-dashboard-professional.png",
-    description:
-      "Web portal for campus recruitment activities with dashboards for students, recruiters, and placement cell administrators.",
-    tags: ["UI Design", "Dashboard", "Web App"],
-    links: {
-      live: "https://example.com",
-      github: "https://github.com",
-    },
-  },
-  {
-    id: "design-system",
-    title: "Design System",
-    category: "ui",
-    image: "/placeholder.svg?height=600&width=800&query=ui+component+library+design+system+documentation",
-    description:
-      "Comprehensive design system with reusable components, style guides, and documentation for consistent product development.",
-    tags: ["Design System", "Components", "Documentation"],
-    links: {
-      github: "https://github.com",
-    },
-  },
-  {
-    id: "e-commerce-app",
-    title: "E-Commerce App",
-    category: "mobile",
-    image: "/placeholder.svg?height=600&width=800&query=e-commerce+mobile+app+shopping+cart+product+gallery",
-    description:
-      "Mobile shopping application with intuitive product browsing, cart management, and checkout experience.",
-    tags: ["Mobile Design", "E-Commerce", "UX/UI"],
-    links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
-    },
-  },
-  {
-    id: "travel-website",
-    title: "Travel Website",
-    category: "web",
-    image: "/placeholder.svg?height=600&width=800&query=travel+website+destination+booking+scenic+views",
-    description: "Responsive travel booking website with destination discovery, booking management, and user reviews.",
-    tags: ["Web Design", "Travel", "Booking System"],
-    links: {
-      live: "https://example.com",
-      github: "https://github.com",
-    },
-  },
-  {
-    id: "restaurant-branding",
-    title: "Restaurant Branding",
-    category: "graphic",
-    image: "/placeholder.svg?height=600&width=800&query=restaurant+branding+logo+menu+design+elegant",
-    description:
-      "Complete brand identity for a high-end restaurant including logo, menu design, and marketing materials.",
-    tags: ["Branding", "Logo Design", "Print Design"],
-    links: {
-      live: "https://example.com",
-    },
-  },
-  {
-    id: "fitness-app",
-    title: "Fitness App",
-    category: "mobile",
-    image: "/placeholder.svg?height=600&width=800&query=fitness+app+workout+tracker+progress+charts",
-    description: "Workout tracking and fitness planning app with progress visualization and social features.",
-    tags: ["Mobile Design", "Health", "UX Research"],
-    links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
-    },
-  },
-  {
-    id: "portfolio-template",
-    title: "Portfolio Template",
-    category: "web",
-    image: "/placeholder.svg?height=600&width=800&query=portfolio+website+template+designer+showcase",
-    description: "Customizable portfolio website template for designers and creative professionals.",
-    tags: ["Web Design", "Template", "Portfolio"],
-    links: {
-      live: "https://example.com",
-      github: "https://github.com",
-    },
-  },
-  {
-    id: "music-streaming-app",
-    title: "Music Streaming App",
-    category: "mobile",
-    image: "/placeholder.svg?height=600&width=800&query=music+streaming+app+player+playlist+interface",
-    description: "Music streaming application with personalized recommendations and playlist management.",
-    tags: ["Mobile Design", "Music", "UX/UI"],
-    links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
-    },
-  },
+  
 ]
 
 export default function ProjectsPage() {

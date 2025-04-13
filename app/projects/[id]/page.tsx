@@ -13,61 +13,6 @@ import { ArrowLeft, Calendar, ExternalLink, Github, Layers, User } from "lucide-
 // This would typically come from a database or API
 const projectsData = [
   {
-    id: "nit-hamirpur-app",
-    title: "NIT Hamirpur App",
-    category: "mobile",
-    image: "/vibrant-purple-app.png",
-    description:
-      "Official mobile application for NIT Hamirpur students with features for campus updates, academic resources, and event notifications.",
-    tags: ["UI/UX", "Mobile App", "React Native"],
-    links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
-    },
-    client: "NIT Hamirpur",
-    date: "2022-2023",
-    role: "Lead UI/UX Designer",
-    fullDescription: [
-      "The NIT Hamirpur App was designed to serve as a comprehensive digital platform for students, faculty, and staff at the National Institute of Technology, Hamirpur. The goal was to create a centralized mobile application that would streamline access to campus resources, provide timely updates, and enhance the overall campus experience.",
-      "As the Lead UI/UX Designer, I conducted extensive user research with students and faculty to understand their needs and pain points. This research informed the design of an intuitive interface that prioritizes easy access to frequently used features while maintaining a clean, modern aesthetic aligned with the institute's brand identity.",
-      "The app includes features such as a personalized dashboard, academic calendar integration, course schedules, campus news and announcements, event notifications, and access to digital library resources. Special attention was given to ensuring the app was accessible to all users, including those with disabilities.",
-    ],
-    process: [
-      {
-        title: "Research & Discovery",
-        description:
-          "Conducted user interviews, surveys, and competitive analysis to understand user needs and market standards.",
-      },
-      {
-        title: "Wireframing & Information Architecture",
-        description:
-          "Created low-fidelity wireframes and established a logical information hierarchy to ensure intuitive navigation.",
-      },
-      {
-        title: "Visual Design",
-        description:
-          "Developed a clean, modern UI with the institute's brand colors and created a comprehensive design system for consistency.",
-      },
-      {
-        title: "Prototyping & Testing",
-        description:
-          "Built interactive prototypes and conducted usability testing with students and faculty to refine the user experience.",
-      },
-      {
-        title: "Developer Handoff",
-        description:
-          "Created detailed specifications and worked closely with developers to ensure accurate implementation.",
-      },
-    ],
-    outcomes: [
-      "Successfully launched on Google Play Store with over 5,000 downloads in the first month",
-      "Reduced student inquiries at administrative offices by 40%",
-      "Increased student participation in campus events by 25%",
-      "Received an average rating of 4.7/5 from users",
-    ],
-    gallery: ["/purple-app-dashboard.png", "/purple-events-calendar.png", "/purple-app-profile.png"],
-  },
-  {
     id: "hill-ffair-app",
     title: "HILL’FFAIR 2k22 APP",
     category: "mobile",
@@ -435,341 +380,173 @@ const projectsData = [
     ],
   },
   {
-    id: "e-commerce-app",
-    title: "E-Commerce App",
-    category: "mobile",
-    image: "/placeholder.svg?height=600&width=800&query=e-commerce+mobile+app+shopping+cart+product+gallery",
-    description:
-      "Mobile shopping application with intuitive product browsing, cart management, and checkout experience.",
-    tags: ["Mobile Design", "E-Commerce", "UX/UI"],
-    links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
-    },
-    client: "Fashion Retailer",
-    date: "2022",
-    role: "UI/UX Designer",
-    fullDescription: [
-      "A fashion retailer needed a mobile e-commerce application to expand their digital presence and provide customers with a seamless shopping experience on mobile devices. The goal was to create an app that would showcase their products effectively while making the browsing and purchasing process as frictionless as possible.",
-      "I designed a comprehensive mobile shopping experience with intuitive product browsing, detailed product pages, easy cart management, and a streamlined checkout process. The design emphasizes high-quality product imagery while maintaining fast performance and ease of navigation.",
-      "The app includes features such as personalized recommendations, saved favorites, size guides, and order tracking to enhance the overall shopping experience and encourage repeat purchases.",
-    ],
-    process: [
-      {
-        title: "User Research",
-        description:
-          "Conducted research to understand mobile shopping behaviors and user expectations for fashion e-commerce.",
-      },
-      {
-        title: "Information Architecture",
-        description:
-          "Developed a logical product categorization and navigation structure to help users find products easily.",
-      },
-      {
-        title: "Wireframing",
-        description: "Created low-fidelity wireframes to establish core user flows and screen layouts.",
-      },
-      {
-        title: "Visual Design",
-        description:
-          "Developed a visually appealing interface that showcases products while maintaining brand identity.",
-      },
-      {
-        title: "Usability Testing",
-        description:
-          "Conducted testing with target users to identify and address pain points in the shopping experience.",
-      },
-    ],
-    outcomes: [
-      "Achieved 25,000+ app downloads within the first three months",
-      "Increased mobile conversion rate by 35% compared to the mobile website",
-      "Reduced cart abandonment rate by 40% through streamlined checkout",
-      "Generated 30% of total online sales through the app within six months of launch",
-    ],
-    gallery: [
-      "/placeholder.svg?height=800&width=400&query=fashion+e-commerce+app+product+listing",
-      "/placeholder.svg?height=800&width=400&query=fashion+e-commerce+app+product+detail",
-      "/placeholder.svg?height=800&width=400&query=fashion+e-commerce+app+checkout+process",
-    ],
-  },
-  {
-    id: "travel-website",
-    title: "Travel Website",
+    id: "e-commerce",
+    title: "E-Commerce Website",
     category: "web",
-    image: "/placeholder.svg?height=600&width=800&query=travel+website+destination+booking+scenic+views",
-    description: "Responsive travel booking website with destination discovery, booking management, and user reviews.",
-    tags: ["Web Design", "Travel", "Booking System"],
-    links: {
-      live: "https://example.com",
-      github: "https://github.com",
-    },
-    client: "Wanderlust Travel",
-    date: "2021",
-    role: "UI/UX Designer",
-    fullDescription: [
-      "Wanderlust Travel needed a modern, responsive website to showcase their curated travel experiences and streamline the booking process for customers. The goal was to create an inspiring digital platform that would highlight destinations while making the research and booking process intuitive and enjoyable.",
-      "I designed a visually rich website that balances stunning destination imagery with clear information architecture and efficient booking flows. The design emphasizes discovery and inspiration while ensuring that practical details and booking functionality are easily accessible.",
-      "The website includes features such as destination guides, interactive maps, booking management, user reviews, and personalized recommendations to create a comprehensive travel planning platform.",
-    ],
-    process: [
-      {
-        title: "Competitive Analysis",
-        description:
-          "Analyzed leading travel websites to identify best practices and opportunities for differentiation.",
-      },
-      {
-        title: "User Journey Mapping",
-        description:
-          "Mapped the end-to-end travel planning journey to ensure the website supported all key user needs.",
-      },
-      {
-        title: "Content Strategy",
-        description: "Developed a content strategy that balances inspirational imagery with practical information.",
-      },
-      {
-        title: "Responsive Design",
-        description:
-          "Created designs for desktop, tablet, and mobile to ensure a seamless experience across all devices.",
-      },
-      {
-        title: "Interactive Prototyping",
-        description: "Built interactive prototypes to test and refine key user flows such as search and booking.",
-      },
-    ],
-    outcomes: [
-      "Increased website traffic by 120% through improved SEO and user engagement",
-      "Improved booking conversion rate by 45% compared to the previous website",
-      "Reduced customer support inquiries by 30% through clearer information architecture",
-      "Increased average session duration by 2.5 minutes through engaging content",
-    ],
-    gallery: [
-      "/placeholder.svg?height=600&width=800&query=travel+website+homepage+destination+showcase",
-      "/placeholder.svg?height=600&width=800&query=travel+website+destination+detail+page",
-      "/placeholder.svg?height=600&width=800&query=travel+website+booking+interface",
-    ],
-  },
-  {
-    id: "restaurant-branding",
-    title: "Restaurant Branding",
-    category: "graphic",
-    image: "/placeholder.svg?height=600&width=800&query=restaurant+branding+logo+menu+design+elegant",
+    image: "/E-Commerce Cover.png",
     description:
-      "Complete brand identity for a high-end restaurant including logo, menu design, and marketing materials.",
-    tags: ["Branding", "Logo Design", "Print Design"],
+      "A modern, conversion-focused e-commerce website designed from scratch with user-centric features, responsive UI, and a seamless shopping experience tailored for today’s online retail expectations.",
+    tags: ["E-Commerce", "UI/UX Design", "Product Design", "Figma", "User Flow", "Web", "Design System"],
     links: {
-      live: "https://example.com",
+     
     },
-    client: "Fusion Bistro",
-    date: "2022",
-    role: "Brand Designer",
-    fullDescription: [
-      "Fusion Bistro, a new high-end restaurant combining Asian and Mediterranean cuisines, needed a complete brand identity that would reflect their unique culinary approach and upscale dining experience. The goal was to create a sophisticated visual identity that would appeal to discerning diners and stand out in a competitive market.",
-      "I developed a comprehensive brand identity including logo design, color palette, typography system, menu design, signage, business cards, and other marketing materials. The design balances elegance with a contemporary edge, reflecting the restaurant's innovative fusion concept.",
-      "The branding emphasizes craftsmanship and attention to detail, mirroring the restaurant's approach to cuisine. Special consideration was given to how the brand would be experienced across different touchpoints, from digital presence to physical dining environment.",
-    ],
-    process: [
-      {
-        title: "Brand Discovery",
-        description:
-          "Conducted workshops with the restaurant owners to understand their vision, values, and target audience.",
-      },
-      {
-        title: "Market Research",
-        description:
-          "Researched the local dining scene and competitor branding to identify opportunities for differentiation.",
-      },
-      {
-        title: "Logo Development",
-        description: "Created multiple logo concepts and refined the selected direction through iterative feedback.",
-      },
-      {
-        title: "Brand System Design",
-        description:
-          "Developed a cohesive visual system including typography, color palette, patterns, and imagery style.",
-      },
-      {
-        title: "Collateral Design",
-        description: "Applied the brand identity to menus, business cards, signage, and other customer touchpoints.",
-      },
-    ],
-    outcomes: [
-      "Successfully launched the restaurant with a distinctive brand identity",
-      "Received positive feedback from customers on the sophisticated brand experience",
-      "Featured in local design publications for outstanding restaurant branding",
-      "Established strong brand recognition in the local dining scene within six months",
-    ],
-    gallery: [
-      "/placeholder.svg?height=600&width=800&query=restaurant+logo+design+elegant+fusion",
-      "/placeholder.svg?height=600&width=800&query=restaurant+menu+design+luxury+dining",
-      "/placeholder.svg?height=600&width=800&query=restaurant+branding+business+cards+signage",
-    ],
-  },
-  {
-    id: "fitness-app",
-    title: "Fitness App",
-    category: "mobile",
-    image: "/placeholder.svg?height=600&width=800&query=fitness+app+workout+tracker+progress+charts",
-    description: "Workout tracking and fitness planning app with progress visualization and social features.",
-    tags: ["Mobile Design", "Health", "UX Research"],
-    links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
-    },
-    client: "FitTrack",
+    client: "Personal Project",
     date: "2023",
     role: "UI/UX Designer",
     fullDescription: [
-      "FitTrack needed a comprehensive fitness application that would help users track workouts, monitor progress, and stay motivated through social features. The goal was to create an engaging and intuitive app that would appeal to fitness enthusiasts of all levels, from beginners to advanced athletes.",
-      "I designed a feature-rich fitness app with workout tracking, customizable training plans, progress visualization, and community features. The design emphasizes clarity and motivation, with a focus on helping users understand their progress and celebrate achievements.",
-      "The app includes features such as workout libraries, exercise demonstrations, progress tracking with data visualization, goal setting, social sharing, and challenges to keep users engaged and motivated in their fitness journey.",
+      "As part of my initiative to deepen my understanding of product design in high-conversion environments, I created a fully responsive e-commerce website from scratch. This personal project was driven by a desire to replicate industry-level workflows while experimenting with modern design patterns, usability best practices, and scalable components.",
+      "The goal was to simulate a real-world shopping experience that meets the expectations of today’s online users. From product exploration to checkout, I focused on streamlining user interactions and minimizing friction. Key features included dynamic product cards, search filters, wishlist and cart features, responsive grid layouts, and a clean, distraction-free checkout process.",
+      "This project gave me the opportunity to practice end-to-end UI/UX processes—starting from user flow mapping to crafting polished, high-fidelity designs in Figma. I also studied top-performing platforms like Amazon, Nykaa, and Flipkart to identify and integrate successful patterns and conversion-boosting tactics.",
     ],
     process: [
       {
-        title: "User Research",
+        title: "Research & Benchmarking",
         description:
-          "Conducted interviews and surveys with fitness enthusiasts to understand their needs and pain points.",
+          "Studied leading e-commerce platforms to identify UX trends and pain points that commonly lead to user drop-offs or cart abandonment.",
       },
       {
-        title: "Competitive Analysis",
-        description: "Analyzed leading fitness apps to identify best practices and opportunities for innovation.",
-      },
-      {
-        title: "Information Architecture",
-        description: "Developed a logical structure for the app's features and content to ensure intuitive navigation.",
-      },
-      {
-        title: "Visual Design",
+        title: "User Flow & Wireframes",
         description:
-          "Created a dynamic and energetic visual design that motivates users while ensuring clarity of information.",
+          "Defined user journey stages such as browsing, filtering, and purchasing. Created low-fidelity wireframes to establish layout hierarchy and content structure.",
       },
       {
-        title: "Usability Testing",
+        title: " High-Fidelity Design in Figma",
+        description: "Designed pixel-perfect UI screens for mobile and desktop. Included reusable components like product cards, banners, filters, and navbars.",
+      },
+      {
+        title: "Iterative Feedback",
         description:
-          "Conducted testing with fitness enthusiasts to validate the design and refine the user experience.",
+          "Self-critiqued and peer-reviewed through online design communities and forums to refine usability and visual balance.",
       },
     ],
     outcomes: [
-      "Achieved 50,000+ downloads within the first six months",
-      "Maintained a 4.6/5 star rating on app stores",
-      "Achieved 65% user retention rate after 30 days, above industry average",
-      "Featured in health and fitness app collections on major app stores",
+      "Showcased ability to independently deliver industry-standard e-commerce UI design.",
+      "Strengthened understanding of user psychology, hierarchy, and visual balance in retail-focused products.",
+      "Demonstrated knowledge of responsive design principles and component-based design systems.",
+      "Built a project portfolio piece aligned with real-world business goals like improving conversions and retention.",
     ],
     gallery: [
-      "/placeholder.svg?height=800&width=400&query=fitness+app+workout+tracking+interface",
-      "/placeholder.svg?height=800&width=400&query=fitness+app+progress+charts+visualization",
-      "/placeholder.svg?height=800&width=400&query=fitness+app+social+features+challenges",
+      "/E-Commerce 1.png",
+      "/E-Commerce 2.jpg",
+      "/E-Commerce 3.jpg",
     ],
   },
   {
-    id: "portfolio-template",
-    title: "Portfolio Template",
-    category: "web",
-    image: "/placeholder.svg?height=600&width=800&query=portfolio+website+template+designer+showcase",
-    description: "Customizable portfolio website template for designers and creative professionals.",
-    tags: ["Web Design", "Template", "Portfolio"],
-    links: {
-      live: "https://example.com",
-      github: "https://github.com",
-    },
-    client: "Design Community",
-    date: "2023",
-    role: "UI/UX Designer",
-    fullDescription: [
-      "Many designers and creative professionals struggle to create effective portfolio websites that showcase their work while being easy to maintain. The goal was to create a customizable template that would help creatives present their work professionally without requiring extensive web development knowledge.",
-      "I designed a flexible portfolio website template with modular components that can be easily customized to suit different creative disciplines and personal styles. The design prioritizes the showcase of work while providing clear information about the designer's skills, experience, and contact information.",
-      "The template includes multiple project layout options, about and skills sections, contact forms, and responsive design to ensure optimal display across all devices. Special attention was given to performance optimization and accessibility to ensure a positive experience for all users.",
-    ],
-    process: [
-      {
-        title: "Needs Analysis",
-        description:
-          "Researched the needs of different creative professionals to ensure the template would be versatile.",
-      },
-      {
-        title: "Information Architecture",
-        description: "Developed a logical structure that balances portfolio showcase with professional information.",
-      },
-      {
-        title: "Component Design",
-        description: "Created modular components that can be combined and customized to create unique portfolio sites.",
-      },
-      {
-        title: "Responsive Design",
-        description: "Ensured optimal display and functionality across desktop, tablet, and mobile devices.",
-      },
-      {
-        title: "Documentation",
-        description: "Created comprehensive documentation to help users customize and deploy their portfolio sites.",
-      },
-    ],
-    outcomes: [
-      "Adopted by 200+ designers and creative professionals",
-      "Received positive feedback for ease of customization and professional appearance",
-      "Featured in design resources collections on major platforms",
-      "Helped numerous early-career designers establish their online presence",
-    ],
-    gallery: [
-      "/placeholder.svg?height=600&width=800&query=portfolio+template+homepage+showcase",
-      "/placeholder.svg?height=600&width=800&query=portfolio+template+project+detail+page",
-      "/placeholder.svg?height=600&width=800&query=portfolio+template+about+contact+sections",
-    ],
-  },
-  {
-    id: "music-streaming-app",
-    title: "Music Streaming App",
+    id: "nimbus-2022",
+    title: "Nimbus 2k22 APP",
     category: "mobile",
-    image: "/placeholder.svg?height=600&width=800&query=music+streaming+app+player+playlist+interface",
-    description: "Music streaming application with personalized recommendations and playlist management.",
-    tags: ["Mobile Design", "Music", "UX/UI"],
+    image: "/Nimbus 2k22 Cover.png",
+    description:
+      "Designed and led the development of Nimbus 2022 — an all-in-one mobile app for NIT Hamirpur’s annual technical fest, enabling real-time updates, event tracking, and student engagement through modern social features and intuitive UX.",
+    tags: ["Mobile", "UX/UI", "Figma", "Gamification", "Community Engagement", "Android App Design", "Design Systems", "Product Thinking"],
     links: {
-      live: "https://play.google.com/store",
-      github: "https://github.com",
+     
     },
-    client: "MelodiStream",
+    client: "APP Team, NIT Hamirpur",
     date: "2022",
-    role: "UI/UX Designer",
+    role: "Lead UI/UX Designer",
     fullDescription: [
-      "MelodiStream needed a modern music streaming application that would compete with established platforms by offering a superior user experience and unique features. The goal was to create an intuitive and visually appealing app that would make discovering and enjoying music effortless.",
-      "I designed a comprehensive music streaming app with features for music discovery, playlist management, personalized recommendations, and social sharing. The design emphasizes visual appeal and ease of use, with special attention to the core listening experience.",
-      "The app includes features such as a customizable player, seamless playlist management, artist pages, music discovery tools, and integration with social platforms to share music with friends. The interface adapts to different contexts, such as listening at home versus on the go, to provide the most relevant features when needed.",
+      "Nimbus is NIT Hamirpur’s flagship technical festival, and for the 2022 edition, we aimed to elevate the student experience through a modern, community-driven mobile app. As the Lead UI/UX Designer of the APP Team (a student-led development society), I was responsible for designing the entire interface of the official app, which was later launched on the Play Store.",
+      "The app served as the central hub for all fest-related activities—featuring the event schedule, venue maps, speaker profiles, and live notifications. To foster campus-wide engagement, we included features inspired by social media platforms: users could create posts, upload images, and interact through comments within the app. A real-time chat system allowed students and societies to coordinate smoothly.",
+      "We also introduced features like a live quiz module, interactive leaderboards, a society showcase section with member directories, and gamified participation badges. All UI elements were designed to be vibrant, intuitive, and in sync with the festive branding of Nimbus 2022. The goal was to blend functionality with a sense of celebration and community, and we succeeded.",
     ],
     process: [
       {
-        title: "User Research",
+        title: "Team Coordination & Requirement Gathering",
         description:
-          "Conducted research on music consumption habits and pain points with existing streaming platforms.",
+          "Led brainstorming sessions with organizers and team members to define core objectives, user roles, and must-have features tailored for a college-wide tech fest.",
       },
       {
-        title: "Competitive Analysis",
+        title: "Information Architecture & Wireframing",
         description:
-          "Analyzed leading music streaming apps to identify opportunities for differentiation and improvement.",
+          "Oversaw the creation of user flows and low-fidelity wireframes that prioritized intuitive navigation, real-time updates, and seamless access to event details.",
       },
       {
-        title: "Information Architecture",
-        description:
-          "Developed a logical structure for music organization and discovery that balances exploration with quick access.",
+        title: "Visual Design & Prototyping",
+        description: "Directed the design in Figma—building a scalable design system, interactive UI components, and a visually engaging theme aligned with the fest's branding.",
       },
       {
-        title: "Visual Design",
+        title: "User Testing & Iteration",
         description:
-          "Created a visually rich interface that showcases album art while maintaining usability and readability.",
+          "Conducted peer testing across various devices to ensure usability and accessibility; refined designs based on feedback to improve engagement and discoverability.",
       },
       {
-        title: "Interaction Design",
-        description:
-          "Designed intuitive gestures and transitions to make navigation and playback control feel natural and effortless.",
+        title: "Handoff & Development Oversight",
+        description: "Supervised the handoff process by preparing detailed specs, exporting assets, and collaborating with developers to ensure pixel-perfect implementation.",
       },
     ],
     outcomes: [
-      "Achieved 100,000+ downloads within the first year",
-      "Maintained a 4.7/5 star rating on app stores",
-      "Users spend an average of 45 minutes per session in the app",
-      "Featured in 'Best New Apps' collections on major app stores",
+      "5000+ Downloads within the first week of launch on the Play Store.",
+      "1500+ User Posts created during the 3-day fest through the in-app social wall.",
+      "92% User Retention during the fest, with positive feedback from students and faculty.",
+      "Empowered societies with in-app promotion and recognition via featured profiles.",
+      "Strengthened peer collaboration and visibility across departments through real-time chat and content sharing.",
     ],
     gallery: [
-      "/placeholder.svg?height=800&width=400&query=music+app+player+interface+modern",
-      "/placeholder.svg?height=800&width=400&query=music+app+playlist+management+screen",
-      "/placeholder.svg?height=800&width=400&query=music+app+discovery+recommendations+interface",
+      "/Nimbus 2k22.png",
+      "/Nimbus 2k22 1.png",
+      "/Nimbus 2k22 2.png",
+      "/Nimbus 2k22 3.png",
+      "/Nimbus 2k22 4.png",
+      "/Nimbus 2k22 5.png",
+    ],
+  },
+  {
+    id: "nimbus-2023",
+    title: "Nimbus 2k23 APP",
+    category: "mobile",
+    image: "/Nimbus 2k23 Cover.png",
+    description:
+      "Official mobile app for NIT Hamirpur's tech fest, designed to deliver personalized schedules, real-time updates, quizzes, and a social feed — enhancing engagement for 5,000+ users.",
+    tags: ["Mobile App Design", "UI/UX", "Figma", "User Engagement", "Event App", "College Fest", "Community Building"],
+    links: {
+      
+    },
+    client: "APP Team, NIT Hamirpur",
+    date: "2023",
+    role: "Lead UI/UX Designer",
+    fullDescription: [
+      "Nimbus 2023 was the official mobile application developed for NIT Hamirpur's annual technical fest. As the Lead UI/UX Designer of the App Team, I spearheaded the design of an interactive, scalable, and student-centric digital experience that became the fest’s primary engagement platform for thousands of participants.",
+      "This year’s version evolved beyond schedules and event listings. We introduced a real-time notification system, interactive campus map, and personalized user dashboards for a tailored fest journey. A built-in quiz hub added gamification to the user experience, while the social module allowed users to post images, chat, and engage, echoing the dynamics of modern social apps but within the boundaries of our college community.",
+      "From society showcases to event leaderboards, the app was not just an information portal—it was a fest companion. It reflected the spirit of innovation and tech celebration, driving engagement, promoting student initiatives, and leaving a lasting digital legacy for NIT Hamirpur.",
+    ],
+    process: [
+      {
+        title: "Goal Alignment & Discovery",
+        description:
+          "Collaborated with core organizers to identify user personas and define goals that balanced utility, performance, and fest excitement.",
+      },
+      {
+        title: "Wireframing & Experience Mapping",
+        description:
+          "Created structured low-fidelity wireframes mapping out event flows, interaction logic, and modular components for rapid scalability.",
+      },
+      {
+        title: "Visual Design & Branding",
+        description: "Designed vibrant, responsive interfaces in Figma using a custom UI kit that visually aligned with Nimbus 2023’s futuristic theme.",
+      },
+      {
+        title: "Usability Testing & Iteration",
+        description:
+          "Conducted peer usability sessions, collected feedback via surveys, and refined features like quiz UX and chat smoothness for real-time use.",
+      },
+      {
+        title: "Handoff & Cross-Team Collaboration",
+        description: "Coordinated with developers for smooth asset delivery and implementation, ensuring UI consistency and interaction integrity across devices.",
+      },
+    ],
+    outcomes: [
+      "Over 5,000+ app downloads during fest week",
+      "Increased session duration by 40% compared to previous year",
+      " 85% of participants used the in-app quiz feature",
+    ],
+    gallery: [
+      "/Nimbus 2k23.png",
+      "/Nimbus 2k23 0.png",
+      "Nimbus 2k23 1.png",
+      "/Nimbus 2k23 2.png",
+      "/Nimbus 2k23 3.png",
+      "/Nimbus 2k23 4.png",
     ],
   },
 ]
