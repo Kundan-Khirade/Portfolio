@@ -94,6 +94,30 @@ export default function ProjectsSection() {
       },
     },
     {
+      id: "e-commerce",
+      title: "E-Commerce Website",
+      category: "web",
+      image: "/E-Commerce Cover.png",
+      description:
+        "A modern, conversion-focused e-commerce website designed from scratch with user-centric features, responsive UI, and a seamless shopping experience tailored for today’s online retail expectations.",
+      tags: ["E-Commerce", "UI/UX Design", "Product Design", "Figma", "User Flow", "Web", "Design System"],
+      links: {
+       
+      },
+    },
+    {
+      id: "nimbus-2022",
+      title: "Nimbus 2k22 APP",
+      category: "mobile",
+      image: "/Nimbus 2k22 Cover.png",
+      description:
+        "Designed and led the development of Nimbus 2022 — an all-in-one mobile app for NIT Hamirpur’s annual technical fest, enabling real-time updates, event tracking, and student engagement through modern social features and intuitive UX.",
+      tags: ["Mobile", "UX/UI", "Figma", "Gamification", "Community Engagement", "Design Systems", "Android App Design", "Product Thinking"],
+      links: {
+       
+      },
+    },
+    {
       id: "bharat-pros",
       title: "BharatPro Website",
       category: "web",
