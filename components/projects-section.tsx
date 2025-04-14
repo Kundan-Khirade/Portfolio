@@ -149,15 +149,19 @@ export default function ProjectsSection() {
         </div>
 
         <Tabs defaultValue="all" className="mb-12" onValueChange={setActiveTab}>
-          <div className="flex justify-center">
-            <TabsList className="grid grid-cols-5 w-full max-w-md">
-              <TabsTrigger value="all">All</TabsTrigger>
-              <TabsTrigger value="mobile">Mobile</TabsTrigger>
-              <TabsTrigger value="web">Web</TabsTrigger>
-              <TabsTrigger value="graphic">Graphic</TabsTrigger>
-              <TabsTrigger value="ui">UI/UX</TabsTrigger>
-            </TabsList>
-          </div>
+        <div className="flex justify-center">
+  <TabsList className="grid w-full max-w-md grid-cols-3 gap-2">
+    <TabsTrigger value="all" className="transition-all">
+      All
+    </TabsTrigger>
+    <TabsTrigger value="mobile" className="transition-all">
+      Mobile
+    </TabsTrigger>
+    <TabsTrigger value="web" className="transition-all">
+      Web
+    </TabsTrigger>
+  </TabsList>
+</div>
 
           <TabsContent value={activeTab} className="mt-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

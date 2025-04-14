@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useInView } from "react-intersection-observer"
@@ -40,7 +39,7 @@ const featuredDesigns = [
   },
   {
     id: 5,
-    title:  "YouTube Thumbnail",
+    title: "YouTube Thumbnail",
     category: "Poster Design",
     thumbnail: "/Youtube Thumbnail 5.jpg",
     featured: true,
@@ -114,26 +113,26 @@ export default function GraphicDesignPreview() {
   }
 
   // Enhanced parallax effect for cursor
-  const getParallaxStyle = (index: number) => {
-    if (hoveredIndex !== index) return {}
+  // const getParallaxStyle = (index: number) => {
+  //   if (hoveredIndex !== index) return {}
 
-    const windowWidth = typeof window !== "undefined" ? window.innerWidth : 1000
-    const windowHeight = typeof window !== "undefined" ? window.innerHeight : 800
+  //   const windowWidth = typeof window !== "undefined" ? window.innerWidth : 1000
+  //   const windowHeight = typeof window !== "undefined" ? window.innerHeight : 800
 
-    // Calculate distance from center (normalized to -1 to 1)
-    const moveX = (cursorPosition.x - windowWidth / 2) / (windowWidth / 2)
-    const moveY = (cursorPosition.y - windowHeight / 2) / (windowHeight / 2)
+  //   // Calculate distance from center (normalized to -1 to 1)
+  //   const moveX = (cursorPosition.x - windowWidth / 2) / (windowWidth / 2)
+  //   const moveY = (cursorPosition.y - windowHeight / 2) / (windowHeight / 2)
 
-    // Apply more dramatic effect
-    const tiltX = moveY * 10 // Tilt based on Y position (inverted for natural feel)
-    const tiltY = moveX * -10 // Tilt based on X position (inverted for natural feel)
-    const translateZ = 30 // Give depth to the element
+  //   // Apply more dramatic effect
+  //   const tiltX = moveY * 10 // Tilt based on Y position (inverted for natural feel)
+  //   const tiltY = moveX * -10 // Tilt based on X position (inverted for natural feel)
+  //   const translateZ = 30 // Give depth to the element
 
-    return {
-      transform: `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(${translateZ}px)`,
-      transition: "transform 0.2s ease-out",
-    }
-  }
+  //   return {
+  //     transform: `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(${translateZ}px)`,
+  //     transition: "transform 0.2s ease-out",
+  //   }
+  // }
 
   // Special effect for the 4th item (Social Media Campaign)
   const getFeaturedStyle = (index: number, design: any) => {
@@ -149,7 +148,7 @@ export default function GraphicDesignPreview() {
   }
 
   return (
-    <section id="graphic-design" className="py-20 relative overflow-hidden" ref={ref}>
+    <section id="graphics" className="py-20 relative overflow-hidden" ref={ref}>
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/30 z-0"></div>
       <div className="absolute inset-0 opacity-5">
@@ -176,14 +175,8 @@ export default function GraphicDesignPreview() {
           className={`mb-16 transition-all duration-1000 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <motion.div
-            className="relative rounded-2xl overflow-hidden border border-purple-500/20 shadow-xl shadow-purple-500/5 aspect-[21/9] max-w-5xl mx-auto"
-            style={{
-              rotateX,
-              rotateY,
-              transformStyle: "preserve-3d",
-              perspective: 1000,
-            }}
-            whileHover={{ scale: 1.02 }}
+            className="relative rounded-2xl overflow-hidden border border-purple-500/20 shadow-xl shadow-purple-500/5 aspect-[16/9] max-w-5xl mx-auto"
+            whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.3 }}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
@@ -233,8 +226,9 @@ export default function GraphicDesignPreview() {
               {featuredDesigns.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-8 h-1 rounded-full transition-all ${index === featuredIndex ? "bg-white" : "bg-white/30"
-                    }`}
+                  className={`w-8 h-1 rounded-full transition-all ${
+                    index === featuredIndex ? "bg-white" : "bg-white/30"
+                  }`}
                   onClick={() => setFeaturedIndex(index)}
                 />
               ))}
@@ -243,21 +237,22 @@ export default function GraphicDesignPreview() {
         </div>
 
         {/* Gallery Grid - Preview Only */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
           {featuredDesigns.map((design, index) => (
             <div
               key={design.id}
-              className={`transition-all duration-700 delay-${(index % 3) * 100} ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                } perspective ${design.id === 4 ? "md:col-span-2 md:row-span-2" : ""}`}
+              className={`transition-all duration-700 delay-${(index % 3) * 100} ${
+                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              } ${design.id === 4 ? "sm:col-span-2" : ""}`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <Card
-                className={`overflow-hidden cursor-pointer group relative ${design.id === 4 ? "aspect-auto md:aspect-square" : "aspect-square"} transform transition-all duration-500 hover:z-10 hover-3d`}
+                className={`overflow-hidden cursor-pointer group relative transform transition-all duration-500`}
                 style={{
-                  transform: hoveredIndex === index ? "perspective(1000px) rotateX(5deg) rotateY(-5deg)" : "scale(1)",
                   boxShadow: hoveredIndex === index ? "0 10px 40px -15px rgba(139, 92, 246, 0.5)" : "none",
                   ...getFeaturedStyle(index, design),
+                  aspectRatio: "16/9", // Consistent 16:9 rectangular format
                 }}
                 onClick={() => router.push("/graphics")}
                 onMouseEnter={() => showPreview(design.thumbnail, design.title, design.category)}
@@ -319,10 +314,7 @@ export default function GraphicDesignPreview() {
                 </div>
 
                 {/* Content overlay with 3D parallax effect */}
-                <div
-                  className="absolute inset-0 bg-black/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 z-30 overflow-hidden"
-                  style={getParallaxStyle(index)}
-                >
+                <div className="absolute inset-0 bg-black/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 z-30 overflow-hidden">
                   {/* Animated background grid */}
                   <div
                     className="absolute inset-0 cyberpunk-grid opacity-20"
@@ -333,47 +325,14 @@ export default function GraphicDesignPreview() {
                   ></div>
 
                   {/* Content with staggered animation */}
-                  <div className="relative z-10 flex flex-col items-center transform transition-all duration-500 group-hover:translate-y-0 translate-y-4">
+                  <div className="relative z-10 flex flex-col items-center">
                     <div className="text-center">
-                      <h3 className="font-bold text-center mb-1 ">{design.title}</h3>
-                      <p className="text-xs text-white/80 mb-3">{design.category}</p>
+                      <h3 className="font-bold text-center mb-1">{design.title}</h3>
+                      <p className="text-xs text-white/80 mb-2">{design.category}</p>
                     </div>
 
-                    <div className="relative">
-                      <div className="w-12 h-12 rounded-full glass flex items-center justify-center backdrop-blur-sm mx-auto glow-pulse">
-                        <Eye className="h-5 w-5 text-white" />
-                      </div>
-                      {/* Circular progress indicator */}
-                      <svg className="absolute -top-2 -left-2 w-16 h-16 rotate-[-90deg] opacity-80">
-                        <circle cx="32" cy="32" r="28" stroke="rgba(139, 92, 246, 0.3)" strokeWidth="2" fill="none" />
-                        <circle
-                          cx="32"
-                          cy="32"
-                          r="28"
-                          stroke={design.id === 4 ? "url(#gradient-special)" : "url(#gradient)"}
-                          strokeWidth="3"
-                          fill="none"
-                          strokeDasharray="175.9"
-                          strokeDashoffset="175.9"
-                          className="group-hover:animate-progress"
-                          style={{
-                            strokeDashoffset: hoveredIndex === index ? "0" : "175.9",
-                            transition: "stroke-dashoffset 1.5s ease-out",
-                          }}
-                        />
-                        <defs>
-                          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#8b5cf6" />
-                            <stop offset="100%" stopColor="#ec4899" />
-                          </linearGradient>
-                          <linearGradient id="gradient-special" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#8b5cf6" />
-                            <stop offset="33%" stopColor="#ec4899" />
-                            <stop offset="66%" stopColor="#3b82f6" />
-                            <stop offset="100%" stopColor="#10b981" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
+                    <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                      <Eye className="h-4 w-4 text-white" />
                     </div>
                   </div>
                 </div>
@@ -384,9 +343,9 @@ export default function GraphicDesignPreview() {
                     src={design.thumbnail || "/placeholder.svg?height=600&width=800&query=graphic+design+thumbnail"}
                     alt={design.title}
                     fill
-                    className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:filter-brightness-75"
+                    className="object-cover transition-all duration-500 group-hover:scale-105"
                     style={{
-                      filter: hoveredIndex === index ? "brightness(0.7) contrast(1.1)" : "none",
+                      filter: hoveredIndex === index ? "brightness(0.8)" : "none",
                     }}
                   />
 
@@ -414,10 +373,10 @@ export default function GraphicDesignPreview() {
                 opacity: 1,
                 scale: 1,
                 y: 0,
-                width: isPreviewExpanded ? "80vw" : "300px",
-                height: isPreviewExpanded ? "80vh" : "300px",
-                right: isPreviewExpanded ? "50%" : "2rem",
-                bottom: isPreviewExpanded ? "50%" : "2rem",
+                width: isPreviewExpanded ? "90vw" : "280px",
+                height: isPreviewExpanded ? "auto" : "160px",
+                right: isPreviewExpanded ? "50%" : "1rem",
+                bottom: isPreviewExpanded ? "50%" : "1rem",
                 x: isPreviewExpanded ? "50%" : "0",
                 y: isPreviewExpanded ? "50%" : "0",
               }}
@@ -426,8 +385,7 @@ export default function GraphicDesignPreview() {
               className="fixed z-50 rounded-lg overflow-hidden shadow-2xl pointer-events-auto"
               style={{
                 boxShadow: "0 10px 40px -5px rgba(139, 92, 246, 0.5)",
-                transformStyle: "preserve-3d",
-                perspective: "1000px",
+                aspectRatio: isPreviewExpanded ? "16/9" : "auto",
               }}
               onClick={togglePreviewExpand}
             >
@@ -508,4 +466,3 @@ export default function GraphicDesignPreview() {
     </section>
   )
 }
-
