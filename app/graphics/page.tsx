@@ -1,4 +1,3 @@
-
 "use client"
 
 import type React from "react"
@@ -35,51 +34,51 @@ import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-mo
 
 // Graphic design work data
 const graphicDesigns = [
-    {
-        id: 1,
-        title: "YouTube Thumbnail",
-        category: "Poster Design",
-        thumbnail: "Youtube Thumbnail 1.jpg",
-        fullImage: "Youtube Thumbnail 1.jpg",
-        description:
-          "",
-        tags: ["Adobe Photoshop", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
-        year: "2022",
-      },
-      {
-        id: 2,
-        title: "YouTube Thumbnail",
-        category: "Poster Design",
-        thumbnail: "Youtube Thumbnail 2.jpg",
-        fullImage: "Youtube Thumbnail 2.jpg",
-        description:
-          "",
-        tags: ["Adobe Photoshop","Illustrator", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
-        year: "2021",
-      },
-      {
-        id: 3,
-        title: "YouTube Thumbnail",
-        category: "Poster Design",
-        thumbnail: "Youtube Thumbnail 3.jpg",
-        fullImage: "Youtube Thumbnail 3.jpg",
-        description:
-          "",
-        tags: ["Adobe Photoshop", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
-        year: "2023",
-      },
-      {
-        id: 4,
-        title: "YouTube Thumbnail",
-        category: "Poster Design",
-        thumbnail: "Youtube Thumbnail 4.jpg",
-        fullImage: "Youtube Thumbnail 4.jpg",
-        description:
-          "",
-        tags: ["Adobe Photoshop", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
-        year: "2021",
-      },
-      
+  {
+    id: 1,
+    title: "YouTube Thumbnail",
+    category: "Poster Design",
+    thumbnail: "Youtube Thumbnail 1.jpg",
+    fullImage: "Youtube Thumbnail 1.jpg",
+    description: "",
+    tags: ["Adobe Photoshop", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
+    year: "2022",
+  },
+  {
+    id: 2,
+    title: "YouTube Thumbnail",
+    category: "Poster Design",
+    thumbnail: "Youtube Thumbnail 2.jpg",
+    fullImage: "Youtube Thumbnail 2.jpg",
+    description: "",
+    tags: ["Adobe Photoshop", "Illustrator", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
+    year: "2021",
+  },
+  {
+    id: 3,
+    title: "YouTube Thumbnail",
+    category: "Poster Design",
+    thumbnail: "Youtube Thumbnail 3.jpg",
+    fullImage: "Youtube Thumbnail 3.jpg",
+    description: "",
+    tags: ["Adobe Photoshop", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
+    year: "2023",
+  },
+  {
+    id: 4,
+    title: "YouTube Thumbnail",
+    category: "Poster Design",
+    thumbnail: "Youtube Thumbnail 4.jpg",
+    fullImage: "Youtube Thumbnail 4.jpg",
+    description: "",
+    tags: ["Adobe Photoshop", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
+    year: "2021",
+    featured: true,
+    details:
+      "This YouTube thumbnail was designed for an educational kids channel, featuring vibrant colors and engaging visuals to attract the target audience. The design balances eye-catching elements with clear messaging to maximize click-through rates.",
+    colors: ["#FF5252", "#42A5F5", "#FFCA28", "#66BB6A"],
+  },
+
   {
     id: 9,
     title: "Social Media Campaign",
@@ -98,14 +97,13 @@ const graphicDesigns = [
   {
     id: 5,
     title: "YouTube Thumbnail",
-        category: "Poster Design",
-        thumbnail: "Youtube Thumbnail 5.jpg",
-        fullImage: "Youtube Thumbnail 5.jpg",
-        description:
-          "",
-        tags: ["Adobe Photoshop", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
-        year: "2022",
-      },
+    category: "Poster Design",
+    thumbnail: "Youtube Thumbnail 5.jpg",
+    fullImage: "Youtube Thumbnail 5.jpg",
+    description: "",
+    tags: ["Adobe Photoshop", "Poster", "YouTube", "Educational", "Kids", "Story Telling"],
+    year: "2022",
+  },
   {
     id: 6,
     title: "App Icon Set",
@@ -579,17 +577,18 @@ export default function GraphicsPage() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className={`group perspective ${design.id === 4 ? "md:col-span-2 md:row-span-2" : ""}`}
+                  className={`group perspective ${design.id === 4 ? "md:col-span-2 md:row-span-1" : ""}`}
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <Card
-                    className={`overflow-hidden cursor-pointer relative ${design.id === 4 ? "aspect-auto md:aspect-square" : "aspect-square"} transform transition-all duration-500 hover:z-10 hover-3d`}
+                    className={`overflow-hidden cursor-pointer relative transform transition-all duration-500 hover:z-10 hover-3d`}
                     style={{
                       transform:
                         hoveredIndex === index ? "perspective(1000px) rotateX(5deg) rotateY(-5deg)" : "scale(1)",
                       boxShadow: hoveredIndex === index ? "0 10px 40px -15px rgba(139, 92, 246, 0.5)" : "none",
                       ...getFeaturedStyle(index, design),
+                      aspectRatio: "16/9", // Changed from square to 16:9 rectangular format
                     }}
                     onClick={() => openLightbox(index)}
                   >
@@ -680,18 +679,19 @@ export default function GraphicsPage() {
                           transition={{ duration: 0.3, delay: 0.1 }}
                           className="flex flex-wrap justify-center gap-1 mb-4"
                         >
-                          {design.tags.map((tag, i) => (
-                            <span
-                              key={i}
-                              className="text-[10px] glass px-2 py-0.5 rounded-full transform transition-all duration-300 hover:scale-110 hover:bg-white/30"
-                              style={{
-                                transform: `translateZ(${20 + i * 5}px)`,
-                                transition: "transform 0.3s ease-out",
-                              }}
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                          {design.tags &&
+                            design.tags.slice(0, 3).map((tag, i) => (
+                              <span
+                                key={i}
+                                className="text-[10px] glass px-2 py-0.5 rounded-full transform transition-all duration-300 hover:scale-110 hover:bg-white/30"
+                                style={{
+                                  transform: `translateZ(${20 + i * 5}px)`,
+                                  transition: "transform 0.3s ease-out",
+                                }}
+                              >
+                                {tag}
+                              </span>
+                            ))}
                         </motion.div>
 
                         {/* Special color palette for featured item */}
@@ -982,6 +982,7 @@ export default function GraphicsPage() {
                       filteredDesigns[currentImageIndex].fullImage ||
                       "/placeholder.svg?height=1200&width=800&query=graphic+design+full+image" ||
                       "/placeholder.svg" ||
+                      "/placeholder.svg" ||
                       "/placeholder.svg"
                     }
                     alt={filteredDesigns[currentImageIndex].title}
@@ -1016,11 +1017,12 @@ export default function GraphicsPage() {
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-1 mt-3">
-                        {filteredDesigns[currentImageIndex].tags.map((tag, i) => (
-                          <span key={i} className="text-xs bg-white/20 px-2 py-0.5 rounded-full">
-                            {tag}
-                          </span>
-                        ))}
+                        {filteredDesigns[currentImageIndex].tags &&
+                          filteredDesigns[currentImageIndex].tags.map((tag, i) => (
+                            <span key={i} className="text-xs bg-white/20 px-2 py-0.5 rounded-full">
+                              {tag}
+                            </span>
+                          ))}
                       </div>
                     </motion.div>
                   ) : (
@@ -1054,11 +1056,12 @@ export default function GraphicsPage() {
                           <div>
                             <h5 className="text-sm font-medium mb-1">Tags</h5>
                             <div className="flex flex-wrap gap-1">
-                              {filteredDesigns[currentImageIndex].tags.map((tag, i) => (
-                                <span key={i} className="text-xs bg-white/20 px-2 py-0.5 rounded-full">
-                                  {tag}
-                                </span>
-                              ))}
+                              {filteredDesigns[currentImageIndex].tags &&
+                                filteredDesigns[currentImageIndex].tags.map((tag, i) => (
+                                  <span key={i} className="text-xs bg-white/20 px-2 py-0.5 rounded-full">
+                                    {tag}
+                                  </span>
+                                ))}
                             </div>
                           </div>
                         </div>

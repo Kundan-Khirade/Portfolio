@@ -79,12 +79,12 @@ export default function HeroSection() {
             </div>
 
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-border shadow-lg">
+            <div className="absolute -top-4 -right-4 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-border shadow-lg z-10">
               <div className="text-xs font-medium">Experience</div>
               <div className="text-xl font-bold">8+ Years</div>
             </div>
 
-            <div className="absolute -bottom-4 -left-4 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-border shadow-lg">
+            <div className="absolute -bottom-4 -left-4 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-border shadow-lg z-10">
               <div className="text-xs font-medium">Projects</div>
               <div className="text-xl font-bold">50+</div>
             </div>
