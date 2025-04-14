@@ -120,9 +120,8 @@ export default function ExperienceSection() {
                 </div>
 
                 {/* Content */}
-                <div className={`md:w-1/2 ${index % 2 === 0 ? "md:text-right md:pr-8" : "md:pl-8"} pl-12 md:pl-0`}>
-                  <Card
-                    className={`card-hover overflow-hidden transition-all duration-500 ${
+                <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"} pl-12 md:pl-0`}>
+                  <Card className={`card-hover overflow-hidden transition-all duration-500 ${
                       hoveredIndex === index
                         ? "transform md:translate-x-2 shadow-[0_10px_40px_-15px_rgba(139,92,246,0.5)]"
                         : ""

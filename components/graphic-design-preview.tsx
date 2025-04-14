@@ -51,6 +51,27 @@ const featuredDesigns = [
     thumbnail: "/Youtube Thumbnail 6.jpg",
     featured: true,
   },
+  {
+    id: 7,
+    title: "YouTube Thumbnail",
+    category: "Poster Design",
+    thumbnail: "/Youtube Thumbnail 7.jpg",
+    featured: true,
+  },
+  {
+    id: 8,
+    title: "YouTube Thumbnail",
+    category: "Poster Design",
+    thumbnail: "/Youtube Thumbnail 8.jpg",
+    featured: true,
+  },
+  {
+    id: 9,
+    title: "YouTube Thumbnail",
+    category: "Poster Design",
+    thumbnail: "/Youtube Thumbnail 9.jpg",
+    featured: true,
+  },
 ]
 
 export default function GraphicDesignPreview() {

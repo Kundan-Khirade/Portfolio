@@ -34,6 +34,18 @@ export default function Navbar() {
     setIsMenuOpen(false)
   }
 
+  const handleResumeDownload = () => {
+    // Open the resume in a new tab
+    window.open('/Kundan_khirade_resume.pdf', '_blank')
+    // Alternatively, to force download:
+    // const link = document.createElement('a')
+    // link.href = '/resume.pdf'
+    // link.download = 'Kundan_Resume.pdf'
+    // document.body.appendChild(link)
+    // link.click()
+    // document.body.removeChild(link)
+  }
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -84,7 +96,12 @@ export default function Navbar() {
           >
             Contact
           </button>
-          <Button variant="default" size="sm" className="ml-4">
+          <Button 
+            variant="default" 
+            size="sm" 
+            className="ml-4"
+            onClick={handleResumeDownload}
+          >
             Resume
           </Button>
           <ModeToggle />
@@ -140,7 +157,12 @@ export default function Navbar() {
             >
               Contact
             </button>
-            <Button variant="default" size="sm" className="w-full">
+            <Button 
+              variant="default" 
+              size="sm" 
+              className="w-full"
+              onClick={handleResumeDownload}
+            >
               Resume
             </Button>
           </nav>

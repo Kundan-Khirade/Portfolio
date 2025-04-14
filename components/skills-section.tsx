@@ -21,16 +21,16 @@ export default function SkillsSection() {
   const toolsSkills = [
     { name: "Figma", level: 95 },
     { name: "Adobe Photoshop", level: 90 },
-    { name: "Adobe Illustrator", level: 85 },
+    { name: "Adobe Illustrator", level: 75 },
     { name: "Adobe XD", level: 88 },
-    { name: "Sketch", level: 80 },
+    { name: "Sketch", level: 70 },
   ]
 
   const creativeSkills = [
     { name: "Visual Storytelling", level: 92 },
     { name: "Brand Identity Design", level: 88 },
-    { name: "Motion Graphics", level: 85 },
-    { name: "3D Visualization", level: 78 },
+    { name: "Motion Graphics", level: 78 },
+    { name: "Critical Thinking", level: 85 },
     { name: "Typography", level: 90 },
   ]
 
@@ -38,14 +38,14 @@ export default function SkillsSection() {
     { name: "Video Editing", icon: "🎬", color: "from-purple-500 to-indigo-500" },
     { name: "Motion Graphics", icon: "✨", color: "from-blue-500 to-cyan-500" },
     { name: "Prompt Design", icon: "💬", color: "from-emerald-500 to-teal-500" },
-    { name: "3D Modeling", icon: "🧊", color: "from-amber-500 to-orange-500" },
+    { name: "Critical Thinking", icon: "🧠", color: "from-amber-500 to-orange-500" },
     { name: "Content Strategy", icon: "📊", color: "from-rose-500 to-pink-500" },
     { name: "Brand Identity", icon: "🎨", color: "from-purple-500 to-pink-500" },
     { name: "Typography", icon: "🔤", color: "from-blue-500 to-indigo-500" },
     { name: "Color Theory", icon: "🌈", color: "from-teal-500 to-green-500" },
     { name: "Accessibility", icon: "♿", color: "from-orange-500 to-red-500" },
     { name: "Usability Testing", icon: "🧪", color: "from-pink-500 to-rose-500" },
-    { name: "Information Architecture", icon: "🏗️", color: "from-indigo-500 to-purple-500" },
+    { name: "Time Management", icon: "⏱️", color: "from-indigo-500 to-purple-500" },
     { name: "Interaction Design", icon: "👆", color: "from-cyan-500 to-blue-500" },
   ]
 

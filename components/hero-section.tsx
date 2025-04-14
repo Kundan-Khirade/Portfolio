@@ -14,6 +14,18 @@ export default function HeroSection() {
     setIsVisible(true)
   }, [])
 
+  const handleResumeDownload = () => {
+    // Open the resume in a new tab
+    window.open('/Kundan_khirade_resume.pdf', '_blank')
+    // Alternatively, to force download:
+    // const link = document.createElement('a')
+    // link.href = '/resume.pdf'
+    // link.download = 'Kundan_Resume.pdf'
+    // document.body.appendChild(link)
+    // link.click()
+    // document.body.removeChild(link)
+  }
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0 hero-gradient z-0"></div>
@@ -35,29 +47,20 @@ export default function HeroSection() {
               View My Work
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline" className="group">
+            <Button size="lg" variant="outline" className="group" 
+            onClick={handleResumeDownload}
+            
+            >
               Download CV
               <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
             </Button>
           </div>
 
           <div className="flex items-center gap-4 mt-8">
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Button>
-            </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/kundankhirade" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
-              </Button>
-            </Link>
-            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="rounded-full hover:text-primary">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
               </Button>
             </Link>
           </div>
@@ -81,12 +84,12 @@ export default function HeroSection() {
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-border shadow-lg z-10">
               <div className="text-xs font-medium">Experience</div>
-              <div className="text-xl font-bold">8+ Years</div>
+              <div className="text-xl font-bold">4+ Years</div>
             </div>
 
             <div className="absolute -bottom-4 -left-4 bg-background/80 backdrop-blur-sm p-3 rounded-lg border border-border shadow-lg z-10">
               <div className="text-xs font-medium">Projects</div>
-              <div className="text-xl font-bold">50+</div>
+              <div className="text-xl font-bold">30+</div>
             </div>
           </div>
         </div>
